@@ -1,0 +1,4030 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веронiка Черкащенко - SK RAtibor.com</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body>.container {
+            flex: 1;
+        }
+
+        .container {
+            max-width: 1140px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .oswald-font {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+
+        .logo-text {
+            font-size: 16px;
+            letter-spacing: 0.1em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.2s, text-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #b71c1c;
+            text-shadow: 0 0 12px rgba(183, 28, 28, 0.45);
+        }
+
+        .lang-switch {
+            background: none;
+            border: 1px solid #333;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 5px 12px;
+            font-size: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-menu {
+            visibility: hidden;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: top right;
+            position: absolute;
+            top: calc(100% + 5px);
+            right: 0;
+            background: #0b0b0b;
+            border: 1px solid #333;
+            border-radius: 10px;
+            min-width: 140px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            overflow: hidden;
+            transition: transform 0.18s ease, opacity 0.18s ease, visibility 0.18s ease;
+        }
+
+        .lang-menu.show {
+            visibility: visible;
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        .lang-menu a {
+            display: block;
+            padding: 11px 16px;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: background 0.2s;
+        }
+
+        .lang-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .lang-menu a:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .lang-menu a.active {
+            color: #b71c1c;
+            font-weight: 700;
+            background: rgba(183, 28, 28, 0.08);
+        }
+
+        .breadcrumbs {
+            padding: 25px 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo-wrapper {
+            flex: 0 0 350px;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            display: block;
+        }
+
+        .profile-main-info {
+            flex: 1;
+            padding-top: 10px;
+        }
+
+        .athlete-id {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 11px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .athlete-name {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .belt-display {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #141414;
+            padding: 12px 15px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            border-left: 3px solid #550676;
+        }
+
+        .belt-color-bar {
+            width: 42px;
+            height: 20px;
+            background-color: #550676;
+            border-radius: 2px;
+        }
+
+        .belt-text-title {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .belt-text-sub {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .stats-summary {
+            display: flex;
+            gap: 15px;
+        }
+
+        .stat-card {
+            background-color: #141414;
+            padding: 15px 20px;
+            border-radius: 2px;
+            flex: 1;
+            border-left: 2px solid transparent;
+        }
+
+        .stat-card-value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 3px;
+        }
+
+        .stat-card-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-card.wins {
+            border-left-color: #388e3c;
+        }
+
+        .stat-card.wins .stat-card-value {
+            color: #388e3c;
+        }
+
+        .stat-card.losses {
+            border-left-color: #d32f2f;
+        }
+
+        .stat-card.losses .stat-card-value {
+            color: #d32f2f;
+        }
+
+        .update-profile-banner {
+            background-color: #141414;
+            padding: 18px 20px;
+            border-radius: 2px;
+            border-left: 3px solid #b71c1c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .update-info-title {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .update-info-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+            max-width: 650px;
+            margin: 0;
+        }
+
+        .update-action-btn {
+            color: #b71c1c;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .section-header-title {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .result-item-card {
+            background-color: #141414;
+            padding: 18px;
+            border-radius: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 3px solid #737373;
+        }
+
+        .result-main-details {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .place-medallion {
+            width: 45px;
+            height: 45px;
+            background-color: #737373;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .event-title {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .event-metadata {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .event-tag-cat {
+            background-color: #222;
+            color: #b71c1c;
+            padding: 1px 5px;
+            border-radius: 2px;
+            font-size: 9px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .result-stats-w-l {
+            display: flex;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .res-stat-item .res-stat-val {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .res-stat-item .res-stat-lbl {
+            font-size: 9px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 700;
+        }
+
+        .res-stat-item.wins .res-stat-val {
+            color: #388e3c;
+        }
+
+        .res-stat-item.losses .res-stat-val {
+            color: #d32f2f;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            background-color: #000000;
+            padding: 50px 0;
+            margin-top: 70px;
+            border-top: 1px solid #1a1a1a;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        footer .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-logo-block {
+            margin-bottom: 12px;
+        }
+
+        .social-links-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icon-box {
+            width: 28px;
+            height: 28px;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+        }
+
+        .footer-column-title {
+            color: #ffffff;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-links-list li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links-list a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+            transition: color 0.2s;
+        }
+
+        .footer-links-list a:hover {
+            color: #ffffff;
+        }
+
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        .belts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .belt-row {
+            position: relative;
+            background-color: #141414;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 3px solid #b71c1c;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .belt-row:hover {
+            background-color: #1c1c1c;
+        }
+
+        .belt-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .belt-lv {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 700;
+            position: static;
+            margin: 0;
+        }
+
+        .belt-rect {
+            width: 80px;
+            height: 35px;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .belt-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .arrow-icon {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+        }
+
+        .bg-purple11 {
+            background-color: #250e2e;
+        }
+
+        .bg-red11 {
+            background-color: #700c0c6e;
+        }
+
+        .bg-orange11 {
+            background-color: #b05a1348;
+        }
+
+        .bg-blue11 {
+            background-color: #0719568e;
+        }
+
+        .bg-yellow11 {
+            background-color: #bdab0866;
+        }
+
+        .bg-green11 {
+            background-color: #0e7b0a4a;
+        }
+
+        .bg-brown11 {
+            background-color: #482b0574;
+        }
+
+        .bg-black11 {
+            background-color: #0000006e;
+        }
+
+        /* Цвета поясов */
+        .bg-purple {
+            background-color: #550676;
+        }
+
+        .bg-purple-red {
+            background: linear-gradient(to bottom, #550676 40%, #ad0808 40%, #ad0808 60%, #550676 60%);
+        }
+
+        .bg-red {
+            background-color: #ad0808;
+        }
+
+        .bg-red-orange {
+            background: linear-gradient(to bottom, #ad0808 40%, #e07116 40%, #e07116 60%, #ad0808 60%);
+        }
+
+        .bg-orange {
+            background-color: #e07116;
+        }
+
+        .bg-orange-blue {
+            background: linear-gradient(to bottom, #e07116 40%, #0e35b3 40%, #0e35b3 60%, #e07116 60%);
+        }
+
+        .bg-blue {
+            background-color: #0e35b3;
+        }
+
+        .bg-blue-yellow {
+            background: linear-gradient(to bottom, #0e35b3 40%, #e7d109 40%, #e7d109 60%, #0e35b3 60%);
+        }
+
+        .bg-yellow {
+            background-color: #e7d109;
+        }
+
+        .bg-yellow-green {
+            background: linear-gradient(to bottom, #e7d109 40%, #0f870b 40%, #0f870b 60%, #e7d109 60%);
+        }
+
+        .bg-green {
+            background-color: #0f870b;
+        }
+
+        .bg-green-brown {
+            background: linear-gradient(to bottom, #0f870b 40%, #513106 40%, #513106 60%, #0f870b 60%);
+        }
+
+        .bg-brown {
+            background-color: #513106;
+        }
+
+        .bg-brown-black {
+            background: linear-gradient(to bottom, #513106 40%, #101010 40%, #101010 60%, #513106 60%);
+        }
+
+        .bg-black {
+            background-color: #101010;
+            border: 1px solid #2d2d2d;
+        }
+
+        .bg-black-1 {
+            background: linear-gradient(to bottom, #101010 40%, #d6b811 40%, #d6b811 60%, #101010 60%);
+            border: 1px solid #2d2d2d;
+        }
+
+        .bg-black-2 {
+            background: linear-gradient(to bottom,
+                    #101010 35%,
+                    /* Верхний черный блок (до 40%) */
+                    #d6b811 35%,
+                    /* Начало 1-й полосы */
+                    #d6b811 45%,
+                    /* Конец 1-й полосы */
+                    #101010 45%,
+                    /* Разделитель между полосами */
+                    #101010 60%,
+                    /* Разделитель между полосами */
+                    #d6b811 60%,
+                    /* Начало 2-й полосы */
+                    #d6b811 70%,
+                    /* Конец 2-й полосы */
+                    #101010 75%
+                    /* Нижний черный блок (после 60%) */
+                );
+            border: 1px solid #2d2d2d;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Стили для модального окна */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #141414;
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+            border-left: 4px solid #b71c1c;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .close-modal {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .modal-desc {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .update-form input,
+        .update-form textarea {
+            width: 100%;
+            background-color: #0b0b0b;
+            border: 1px solid #2d2d2d;
+            padding: 12px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .update-form textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .file-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .file-btn {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 6px 15px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .file-name {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .submit-btn {
+            background-color: #b71c1c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        ::selection {
+            background: #b71c1c;
+            color: white;
+        }
+
+        ::-moz-selection {
+            background: #b71c1c;
+            color: white;
+        }
+
+        /* ауф таблицы */
+
+        table {
+            width: 650px;
+            border-collapse: collapse;
+            border: 2px solid #ccc;
+            /* Изменено на белый цвет, как в комментарии */
+            margin-bottom: 20px;
+            background: transparent;
+            font-family: sans-serif;
+            /* Добавлен шрифт для аккуратности */
+        }
+
+        th,
+        td {
+            border: 2px solid #ccc;
+            /* Изменено на белый цвет */
+            padding: 10px;
+            background: transparent;
+            color: #ccc;
+            /* Изменено на белый цвет */
+            text-align: left;
+            /* Текст по левому краю по умолчанию */
+        }
+
+        th {
+            font-weight: bold;
+            text-align: center;
+            /* Заголовок по центру */
+        }
+
+        /* Класс для ячеек, которые нужно отцентрировать */
+        .center-text {
+            color: #ccc;
+        }
+
+        /* Стили для <i> оставлены, на случай если ты добавишь этот тег позже */
+        i {
+            color: #ccc;
+            font-style: italic;
+            display: inline-block;
+            position: relative;
+            top: -12px;
+        }
+
+        img {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* Убираем стандартную полосу прокрутки */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        /* Черный фон полосы */
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        /* Красный ползунок */
+        ::-webkit-scrollbar-thumb {
+            background: #750000;
+            border-radius: 0;
+            border: 2px solid #000;
+        }
+
+        /* При наведении чуть ярче */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #750000;
+        }
+
+        /* Для Firefox */
+        html {
+            scrollbar-color: #750000 #000000;
+            scrollbar-width: auto;
+        }
+
+        /* ===== СОЦСЕТИ — ИСПРАВЛЕННАЯ ВЕРСИЯ ===== */
+        /* ===== СОЦСЕТИ ===== */
+        .social-section {
+            margin-top: 45px;
+            text-align: left;
+        }
+
+        .social-section h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: inline-block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            pointer-events: auto !important;
+        }
+
+        .social-link:hover {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+        }
+
+        .social-img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+            pointer-events: auto !important;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .belt-lv {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: bold;
+            position: absolute;
+            margin-top: -55px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 1024px) {
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 12px;
+                justify-content: center;
+            }
+            nav {
+                width: 100%;
+                min-width: 0;
+            }
+            .profile-section {
+                flex-wrap: wrap;
+            }
+            .profile-photo-wrapper {
+                flex: 1 1 280px;
+                min-width: 240px;
+                max-width: 100%;
+            }
+            .profile-main-info {
+                flex: 1 1 360px;
+            }
+            .athlete-name {
+                font-size: 36px;
+            }
+            .update-profile-banner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+            .update-info-desc {
+                max-width: 100%;
+            }
+            .result-item-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .event-metadata {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .result-stats-w-l {
+                flex-wrap: wrap;
+                gap: 14px;
+                margin-top: 15px;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .modal-content {
+                max-width: 90%;
+                padding: 24px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .about-text {
+                max-width: 100%;
+            }
+            table {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 680px) {
+            header {
+                padding: 12px 0;
+            }
+            .container {
+                padding: 0 12px;
+            }
+            .logo-text {
+                font-size: 14px;
+            }
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 11px;
+            }
+            .lang-switch {
+                width: 100%;
+            }
+            .lang-dropdown {
+                width: 100%;
+            }
+            .breadcrumbs {
+                padding: 18px 0;
+                font-size: 10px;
+            }
+            .profile-section {
+                flex-direction: column;
+            }
+            .profile-photo-wrapper {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .belt-display {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .stats-summary {
+                flex-direction: column;
+            }
+            .section-header-title {
+                font-size: 24px;
+            }
+            .result-item-card {
+                gap: 16px;
+            }
+            .event-title {
+                font-size: 14px;
+            }
+            .social-icons {
+                gap: 10px;
+            }
+            .social-img {
+                width: 48px;
+                height: 48px;
+            }
+            .modal-content {
+                padding: 18px;
+            }
+            .submit-btn {
+                width: 100%;
+            }
+            footer {
+                padding: 30px 0;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            table {
+                min-width: 100%;
+            }
+            .belt-header {
+                padding: 40px 16px;
+            }
+            .belt-header .belt-rect {
+                width: 110px;
+                height: 45px;
+            }
+            .belt-header h1 {
+                font-size: 34px;
+            }
+            .requirements-box {
+                padding: 20px;
+            }
+            .file-input-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .file-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" onclick="showPage('main'); return false;" class="logo-area oswald-font">
+                <img src="fotoczki/ratibor foto.png" alt="Ratibor Logo" class="logo-img">
+                <div class="logo-text">SK Ratibor</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('main'); return false;">Головна</a></li>
+                    <li><a href="#" onclick="showPage('about'); return false;">Про клуб</a></li>
+                    <li><a href="#" onclick="showPage('belts'); return false;">Пояси</a></li>
+                    <li><a href="#" onclick="showPage('imgg'); return false;">Медіа</a></li>
+                </ul>
+            </nav>
+            <div class="lang-dropdown">
+                <button class="lang-switch" onclick="toggleLangMenu(event)">UA ˇ</button>
+                <div id="lang-menu" class="lang-menu" onclick="event.stopPropagation()">
+                    <a href="index.html">Русский</a>
+                    <a href="ua.html" class="active">Українська</a>
+                    <a href="pl.html">Polski</a>
+                    <a href="en.html">English</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs" id="breadcrumb">
+            Головна
+        </div>
+
+        <div id="main-page" class="page-content active">
+            <div class="profile-section">
+                <div class="profile-photo-wrapper">
+                    <img src="fotoczki/moje foto.jpg" alt="Veronika" class="profile-photo">
+                </div>
+                <div class="profile-main-info">
+                    <div class="athlete-id">07.08.2010</div>
+                    <h1 class="athlete-name">Веронiка Черкащенко</h1>
+                    <div class="belt-display">
+                        <div class="belt-color-bar"></div>
+                        <div class="belt-text-block">
+                            <div class="belt-text-title">Фіолетовий</div>
+                            <div class="belt-text-sub">Base</div>
+                        </div>
+                    </div>
+                    <div class="stats-summary">
+                        <div class="stat-card wins">
+                            <div class="stat-card-value">0</div>
+                            <div class="stat-card-label">Перемоги</div>
+                        </div>
+                        <div class="stat-card losses">
+                            <div class="stat-card-value">2</div>
+                            <div class="stat-card-label">Поразки</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/nikusi.ik?igsh=cWZpc3JhenMyZWN2" target="_blank"
+                                class="social-link">
+                                <img src="fotoczki/Instagram.png" alt="Instagram" class="social-img">
+                            </a>
+                            <a href="https://t.me/kotyaraii" target="_blank" class="social-link">
+                                <img src="fotoczki/telegram.png" alt="telegram" class="social-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="update-profile-banner">
+                <div class="update-info-text">
+                    <h4 class="update-info-title">Оновити дані профілю</h4>
+                    <p class="update-info-desc">Запропонуйте зміни у профілі атлета — нове фото, коригування імені або
+                        іншу інформацію. Автор розгляне.</p>
+                </div>
+
+                <a href="#" onclick="toggleModal(true); return false;" class="update-action-btn">Оновити +</a>
+            </div>
+            <h2 class="section-header-title">Результати турнірів</h2>
+
+            <div class="result-item-card" style="margin-bottom: 15px;">
+                <div class="result-main-details">
+                    <div class="place-medallion">2</div>
+                    <div class="event-text">
+                        <h4 class="event-title">Memoriał Oleksandra Gorbatiuka</h4>
+                        <div class="event-metadata"><span>18-04-2026</span><span class="event-tag-cat">Base</span></div>
+                    </div>
+                </div>
+                <div class="result-stats-w-l">
+                    <div class="res-stat-item wins">
+                        <div class="res-stat-val">0</div>
+                        <div class="res-stat-lbl">Перемоги</div>
+                    </div>
+                    <div class="res-stat-item losses">
+                        <div class="res-stat-val">1</div>
+                        <div class="res-stat-lbl">Поразки</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="result-item-card" style="margin-bottom: 15px;">
+                <div class="result-main-details">
+                    <div class="place-medallion">2</div>
+                    <div class="event-text">
+                        <h4 class="event-title">Challenge Ju-Jitsu Sport</h4>
+                        <div class="event-metadata"><span>11-10-2025</span><span class="event-tag-cat">Base</span></div>
+                    </div>
+                </div>
+                <div class="result-stats-w-l">
+                    <div class="res-stat-item wins">
+                        <div class="res-stat-val">0</div>
+                        <div class="res-stat-lbl">Перемоги</div>
+                    </div>
+                    <div class="res-stat-item losses">
+                        <div class="res-stat-val">1</div>
+                        <div class="res-stat-lbl">Поразки</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-page" class="page-content">
+            <div class="profile-section">
+                <div class="profile-photo-wrapper">
+                    <img src="fotoczki/ratibor foto1.png" alt="Logo" class="profile-photo">
+                </div>
+                <div class="profile-main-info">
+                    <h1 class="athlete-name">Про клуб SK Ratibor</h1>
+                    <div class="about-text">
+                        SK Ratibor — це спортивний клуб, що об’єднує напрями боротьби та рукопашного бою. Ми створюємо
+                        середовище, в якому спортсмени розвивають силу, техніку та характер незалежно від рівня
+                        підготовки.
+
+                        Основу тренувального процесу складають дисципліна, повага та системний підхід до навчання. У
+                        клубі приділяється увага як базовій техніці, так і змагальній підготовці: від перших кроків на
+                        килимі до участі в турнірах.
+
+                        Тренування включають елементи боротьби, ударної техніки та функціональної підготовки, що
+                        дозволяє розвивати витривалість, координацію та впевненість у собі. Ми працюємо з дітьми,
+                        підлітками та дорослими, допомагаючи кожному розкрити свій потенціал.
+
+                        SK Ratibor — це не лише спорт, а й спільнота, де цінуються праця, взаємна підтримка та прагнення
+                        до перемоги.
+
+                        <br>
+                        <!-- Социальные сети -->
+                        <div class="social-section">
+                            <h2 class="section-header-title" style="color: white; margin-top: -27px;">Ми в соцмережах
+                            </h2>
+
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/skratibor?igsh=MWRyN3lvd3h4eWkyeQ==" target="_blank"
+                                    class="social-link">
+                                    <img src="fotoczki/Instagram.png" alt="Instagram" class="social-img">
+                                </a>
+
+                                <a href="https://www.facebook.com/share/1BKYGiWaxF/" target="_blank"
+                                    class="social-link">
+                                    <img src="fotoczki/Facebook.png" alt="Facebook" class="social-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="imgg-page" class="page-content">
+            <div class="media-page-section" style=" color: white;">
+                <h2 class="section-header-title">Медіа</h2>
+                <div
+                    style="background: #1a1a1a; border: 1px solid #700c0c6e; border-radius: 16px; padding: 30px; margin-top: 20px;">
+                    <p style="font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.82); margin: 0;">
+                        Сторінка перебуває на стадії розробки.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="purple-belt-page" class="page-content">
+            <div class="belt-header bg-purple11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect"
+                    style="background-color: #550676; margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">14 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Фіолетовий
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Початкова майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загальна фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Згинання та розгинання рук (і.п. упор лежачи або на колінах) – 10 разів.</li>
+                        <li>Піднімання тулуба (і.п. лежачи на спині руки за голову або вздовж тіла прямі) – 10 разів.
+                        </li>
+                        <li>Піднімання ніг за голову (і.п. лежачи на спині руки вздовж тіла прямі) – 10 разів.</li>
+                        <li>Одночасний підйом тулуба і ніг (і.п. лежачи на животі руки вздовж тіла прямі) – 10 разів.
+                        </li>
+                        <li>Підйом сідниць (і.п. лежачи на спині ноги зігнуті руки вздовж тіла прямі) – 10 разів.</li>
+                        <li>Вихід у планку в упорі на прямих руках (і.п. стоячи) – 10 разів.</li>
+                        <li>Комплекс берпі «burpee», полегшений варіант – 10 разів.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-top: 25px; margin-bottom: 15px;">II.
+                        Елементи гімнастики, акробатики. Страхування і самострахування при виконанні гімнастичних і
+                        акробатичних вправ.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Перекати в сторони (і.п. лежачи на спині руки вгору).</li>
+                        <li>Перекати назад (і.п. сидячи в угрупованні).</li>
+                        <li>Фіксація кінцевого положення при падінні в сторону на бік.</li>
+                        <li>Перекат з одного боку на інший з фіксацією кінцевого положення при падінні в сторону.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-top: 25px; margin-bottom: -5px;">III.
+                        Спеціальна технічна підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">1.
+                        Шикування, команди.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Вітання, стати, рівняйсь, струнко, вільно.</li>
+                        <li>Шикування в шеренгу, в колону, розмикання.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">2.
+                        Володіння позиціями та положеннями.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Стійка основна, бойова (лівостороння, правостороння), фронтальна (навчальна).</li>
+                        <li>Стійка на колінах, на правому (лівому) коліні.</li>
+                        <li>Положення партер.</li>
+                        <li>Положення лежачи на животі (руки вперед, в сторони, вздовж корпусу).</li>
+                        <li>Положення лежачи на спині (руки вперед, в сторони, вздовж корпусу, ноги зігнуті).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">3.
+                        Володіння технікою ударів руками, ногами у фронтальній стійці на місці та в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання прямих ударів руками (лівою, правою).</li>
+                        <li>Виконання ударів коліном вперед (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, що складаються з двох і більше ударів руками та ногами (на основі
+                            вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">4.
+                        Володіння технікою захисту від ударів руками у фронтальній стійці на місці та в пересуванні.
+                    </h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання техніки захисту відбиванням (блоком) зверху вниз і знизу вгору.</li>
+                        <li>Виконання 2 комбінацій, що складаються із захисту та ударів (на основі вивченого матеріалу).
+                        </li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">5.
+                        Володіння технікою пересувань.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Пересування у фронтальній стійці приставним кроком (вперед-назад, вправо-вліво).</li>
+                        <li>Пересування на колінах (в.п. стійка на одному коліні).</li>
+                        <li>Пересування лежачи на спині та лежачи на животі.</li>
+                        <li>Пересування в захваті з партнером кроком, приставним кроком (вперед-назад, вправо-вліво).
+                        </li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">6.
+                        Володіння технікою боротьби.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Захоплення за кисті рук, за руки під ліктями.</li>
+                        <li>Захоплення за відворот кімоно і рукав куртки (односторонній, двосторонній).</li>
+                        <li>Захоплення одягу на плечах.</li>
+                        <li>Захоплення одягу на грудях.</li>
+                        <li>Захоплення одягу на грудях навхрест.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">7.
+                        Володіння технікою боротьби в положенні лежачи, партер.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання утримання збоку.</li>
+                    </ul>
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <!-- ШАБЛОН ДЛЯ ВСЕХ ОСТАЛЬНЫХ ПОЯСОВ -->
+
+        <div id="purple-belt-b-page" class="page-content">
+            <div class="belt-header bg-purple11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-purple-red" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">13 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Фіолетовий з
+                    смужкою
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Початкова майстерність
+                </p>
+            </div>
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">І. Загально-фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Згинання розгинання рук (в.п. упор лежачи або на колінах) – 12 разів.</li>
+                        <li>Піднімання тулуба (в.п. лежачи на спині руки за голову або вздовж тіла прямі) – 15 разів.
+                        </li>
+                        <li>Піднімання ніг за голову (в.п. лежачи на спині руки вздовж тіла прямі)– 15 разів.</li>
+                        <li>Підйом тулуба і ніг одночасно (в.п. лежачи на животі руки вздовж тіла прямі) – 15 разів.
+                        </li>
+                        <li>Підйом сідниць (в.п. лежачи на спині ноги зігнув руки вздовж тіла прямі) – 15 разів.</li>
+                        <li>Вихід в планку в упорі на прямих руках (в.п. стоячи) – 15 разів.</li>
+                        <li>Комплекс Берпі «burpee», полегшаний варіант – 15 разів.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІ. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Перекид вперед через плече (в.п. упор присівши).</li>
+                        <li>Самострахування при перекаті назад (в.п. сидячи ноги вперед).</li>
+                        <li>Самострахування при перекаті в сторону (в.п. сидячи ноги вперед).</li>
+                        <li>Самострахування при падінні вперед (в.п. стійка на колінах).</li>
+                        <li>Фіксація положення стійка на лопатках зігнувши ноги (10 сек).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІІ. Спеціальна технічна
+                        підготовленість.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів руками, ногами в фронтальній стойці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання ударів руками збоку (лівою, правою).</li>
+                        <li>Виконання ударів ногами коліном збоку (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з двох і більше ударів руками, ногами (На основі
+                            вивченого матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Володіння технікою
+                        захисту від ударів руками, в фронтальній стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання техніки захисту відбиванням (Блоком) всередину-назовні.</li>
+                        <li>Виконання 4 комбінацій, які складаються з різних видів захисту (На основі вивченого
+                            матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        пересувань в бойовій стойці.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Кроком (вперед-назад).</li>
+                        <li>Приставним кроком (вперед-назад, вправо-вліво).</li>
+                        <li>Поворот кроком вперед на 90 градусів.</li>
+                        <li>Поворот кроком назад на 90 градусів.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        боротьби в положенні напівстоячи. (Атакуючий і противник стоять на колінах, на одному коліні).
+                    </h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виведення з рівноваги ривком, поштовхом, поворотом.</li>
+                        <li>Переворот перекиданням назад (переведення противника, який сидить в положення лежачи на
+                            спині).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Володіння технікою
+                        боротьби в положенні лежачи, партер.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання утримання з сторони голови.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична реалізація
+                        вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Звільнення від захоплення за одну руку (дві руки) ривком руки (рук) в сторону великих
+                            пальців.
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="red-belt-page" class="page-content">
+            <div class="belt-header bg-red11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-red" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">12 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Червоний
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Початкова майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">І. Загально-фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Згинання розгинання рук (в.п. упор лежачи або на колінах) – 14 раз.</li>
+                        <li>Піднімання тулуба (в.п. лежачи на спині руки за голову або вздовж тіла прямі) – 20 раз.
+                        </li>
+                        <li>Піднімання ніг за голову (в.п. лежачи на спині руки вздовж тіла прямі) – 20 раз.</li>
+                        <li>Підйом тулуба і ніг одночасно (в.п. лежачи на животі руки вздовж тіла прямі) – 20 раз.
+                        </li>
+                        <li>Підйом сідниць (в.п. лежачи на спині ноги зігнув руки вздовж тіла прямі) – 20 раз.</li>
+                        <li>Вихід в планку в упорі на прямих руках з положення стоячи– 20 раз.</li>
+                        <li>Комплекс Берпі «burpee», стандартний варіант – 20 раз.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІ. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Перекид вперед (в.п. стойка).</li>
+                        <li>Самострахування при перекаті назад (в.п. упор присівши).</li>
+                        <li>Самострахування при перекаті в сторону (в.п. упор присівши).</li>
+                        <li>Самострахування при падінні вперед (в.п. стойка на колінах, руки за спиною).</li>
+                        <li>Фіксація положення стойка на лопатках (10 сек).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІІ. Спеціальна технічна
+                        підготовленість.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів руками, ногами в фронтальній стойці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання ударів руками знизу (лівою, правою).</li>
+                        <li>Виконання ударів ногами в сторону (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з двох і більше ударів руками, ногами (На основі
+                            вивченого матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Володіння технікою
+                        захисту від ударів руками, в фронтальній стойці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання техніки захисту ухилом від ударів руками.</li>
+                        <li>Виконання 4 комбінацій, які складаються з різних видів захисту (На основі вивченого
+                            матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        пересувань в бойовій стойці.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Стрибком - «човником» (вперед-назад).</li>
+                        <li>Хресним кроком (вперед-назад, вправо-вліво).</li>
+                        <li>Виконання розвороту на 180 кроком вперед, кроком назад.</li>
+                        <li>Виконання 4 комбінацій, які складаються з різних видів пересувань (кроком, приставним
+                            кроком, хресним кроком, стрибком).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        боротьби в положенні напівстоячи. (Атакуючий в стійці, суперник в положенні стоячи на колінах,
+                        на одному коліні або в партері).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Переворот захопленням за дві руки.</li>
+                        <li>Переворот захопленням шиї з-під плеча.</li>
+                        <li>Переворот захопленням руки і ноги.</li>
+                        <li>Виведення з рівноваги ривком за ногу.</li>
+                        <li>Напівзбивання ривком за шию.</li>
+                        <li>Напівзбивання ривком за руку.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Володіння технікою
+                        боротьби в положенні лежачи, партер.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання утримання поперек.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична реалізація
+                        вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Звільнення від захоплення за руки відбиванням (блоком) вправо-вліво.</li>
+                        <li>Звільнення від захоплення за руки відбиванням (блоком) вгору-вниз.</li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="red-belt-b-page" class="page-content">
+            <div class="belt-header bg-red11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-red-orange" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">11 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Червоний з
+                    смужкою
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Початкова майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">І. Загально-фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Згинання розгинання рук (в.п. упор лежачи або на колінах) – 16 разів.</li>
+                        <li>Піднімання тулуба (в.п. лежачи на спині руки за голову або вздовж тіла прямі) – 25 разів.
+                        </li>
+                        <li>Піднімання ніг за голову (в.п. лежачи на спині руки вздовж тіла прямі) – 25 разів.</li>
+                        <li>Підйом тулуба і ніг одночасно (в.п. лежачи на животі руки вздовж тіла прямі)– 25 разів.
+                        </li>
+                        <li>Підйом сідниць (в.п. лежачи на спині ноги зігнув руки вздовж тіла прямі) – 25 разів.</li>
+                        <li>Вихід в планку в упорі на прямих руках з положення стоячи– 25 разів.</li>
+                        <li>Комплекс Берпі «burpee», стандартний варіант – 25 разів.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІ. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Довгий перекид (в.п. стійка).</li>
+                        <li>Перекид назад (в.п. упор присівши).</li>
+                        <li>Самострахування при падінні назад (в.п. стійка).</li>
+                        <li>Самострахування при падінні в сторону на бік (в.п. стійка).</li>
+                        <li>Самострахування при падінні вперед (в.п. стійка).</li>
+                        <li>Фіксація положення, «борцівський міст» без відриву голови від килима (10 сек). (в.п. лежачи
+                            на спині).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІІ. Спеціальна технічна
+                        підготовленість.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів руками, ногами в фронтальній стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання удару ногою в сторону (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з двох і більше ударів руками, ногами. (На основі
+                            вивченого матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Володіння технікою
+                        захисту від ударів руками, в фронтальній стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання техніки захисту нирком від ударів руками.</li>
+                        <li>Виконання 4 комбінацій, які складаються з різних видів захисту. (На основі вивченого
+                            матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        пересувань в бойовій стійці.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання 4 комбінацій, які складаються з різних видів пересувань (кроком, приставним
+                            кроком, хресним кроком, стрибком).</li>
+                        <li>Виконання розвороту кроком (вперед-назад) 360 градусів.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        боротьби в положенні напівстоячи. (Атакуючий в стійці, суперник в положенні стоячи на колінах,
+                        на одному коліні або в партері).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Напівкидок задня підніжка.</li>
+                        <li>Напівкидок передня підніжка.</li>
+                        <li>Напівкидок зачеп.</li>
+                        <li>Напівзбивання виведенням з рівноваги</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Володіння технікою
+                        боротьби в положенні лежачи, партер.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання утримання верхом, зверху між ногами.</li>
+                        <li>Виконання 2 комбінацій, які складаються з різних видів утримань.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична реалізація
+                        вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Звільнення від захватів двома руками за кисті: ривком рук в сторону великих пальців.</li>
+                        <li>Звільнення від захоплень за плечі підбиванням рук до гори.
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="orange-belt-page" class="page-content">
+            <div class="belt-header bg-orange11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-orange" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">10 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Помаранчевий
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Базова майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        І. Загально-фізична підготовленість.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині, 4 рази.</li>
+                        <li>Згинання розгинання рук в упорі лежачи – 18 разів.</li>
+                        <li>Піднімання тулуба с положення лежачи, руки за голову – 30 разів.</li>
+                        <li>Піднімання ніг с положення лежачи, за голову руки вздовж тіла прямі 30 – разів.</li>
+                        <li>Підйом тулуба і ніг лежачи на животі руки вздовж тіла прямі долонями до пола – 30 разів.
+                        </li>
+                        <li>Вправа «Планка» в упорі на ліктях – 60с.</li>
+                        <li>Комплекс Берпі «burpee», стандартний варіант с віджиманням – 25 разів.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        ІІ. Елементи гімнастики, акробатики. Страхування і самострахування при виконанні гімнастичних і
+                        акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Перекид вперед через партнера, лежачого на животі (в.п. стійка)</li>
+                        <li>Перекид назад в упор стоячи ноги нарізно.</li>
+                        <li>Самострахування при падінні назад через партнера, лежачого на животі (в.п. стійка).</li>
+                        <li>Самострахування після перекиду через плече (в.п. стійка на коліні (правому, лівому).</li>
+                        <li>Самострахування при падінні вперед в стрибку (в.п. стійка ноги нарізно).</li>
+                        <li>З положення лежачи на спині, «гімнастичний міст» з відривом голови від килима (10 сек).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        ІІІ. Спеціальна технічна підготовленість.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Володіння попередніми рівнями.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Володіння технікою ударів руками, ногами в бойовій стійці на місці, в пересуванні.
+                    </h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання удару рукою, прямий (лівою, правою).</li>
+                        <li>Виконання удару ногою, вперед (прямий) (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з двох і більше ударів руками, ногами. (На основі
+                            вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Володіння технікою захисту від ударів руками, ногами в бойовій стійці на місці, в
+                        пересуванні.
+                    </h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Захист від прямих ударів руками в голову, тулуб: кроком, ухилом назад, підставками,
+                            відбиваючи (блоками), ухилами.</li>
+                        <li>Захист від ударів ногами вперед «прямий» в тулуб: відходом назад, відбиваючи, кроками з
+                            поворотом тулуба.</li>
+                        <li>Виконання 4 комбінацій, які складаються з різних видів ударів руками, ногами та захисту від
+                            них. (На основі вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Володіння технікою виконання кидків.
+                    </h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Збивання виведенням з рівноваги ривком.</li>
+                        <li>Збивання виведенням з рівноваги поштовхом.</li>
+                        <li>Збивання захватом ноги спереду.</li>
+                        <li>Передня підніжка.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        5. Володіння технікою боротьби в положенні лежачи, партер.
+                    </h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Перегинання ліктя через стегно (з положення утримання з боку).</li>
+                        <li>Перегинання ліктя через передпліччя (З положення утримання верхи).</li>
+                        <li>Перегинання ліктя через передпліччя (З положення утримання поперек).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Практична реалізація вивченого матеріалу.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Завдання 1. Атака: прямий удар рукою (в голову, в тулуб). Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                        <li>Завдання 2. Атака: удар ногой вперед. Захист: на основі вивченого матеріалу. Контратака: на
+                            основі вивченого матеріалу.</li>
+                        <li>Завдання 3. Атака: Захоплення за одну руку (за дві руки). Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="orange-belt-b-page" class="page-content">
+            <div class="belt-header bg-orange11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-orange-blue" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">9 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Помаранчевий
+                    з
+                    синім
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Базова майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">І. Загально-фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині, 4 рази.</li>
+                        <li>Згинання розгинання рук в упорі лежачи – 20 разів.</li>
+                        <li>Піднімання тулуба с положення лежачи, руки за голову – 35 разів.</li>
+                        <li>Піднімання ніг с положення лежачи, за голову руки вздовж тіла прямі 35 – разів.</li>
+                        <li>Підйом тулуба і ніг лежачи на животі руки вздовж тіла прямі долонями до пола – 35 разів.
+                        </li>
+                        <li>Вправа «Планка» в упорі на ліктях – 60с.</li>
+                        <li>Комплекс Берпі «burpee», стандартний варіант с віджиманням – 30 разів.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІ. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Переворот в сторону (колесо) з стійки обличчям по напряму руху.</li>
+                        <li>Перекид вперед через партнера, що стоїть в партері (в.п. стійка).</li>
+                        <li>Самострахування при падінні назад через партнера, що стоїть в партері (в.п. стійка).</li>
+                        <li>Самострахування після перекиду вперед через партнера, що стоїть в партері (в.п. стійка).
+                        </li>
+                        <li>Самострахування при падінні вперед в стрибку через партнера, лежачого на животі.</li>
+                        <li>Стійка на руках біля стіни або за допомогою партнера (10 сек).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">ІІІ. Спеціальна технічна
+                        підготовленість.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів руками, ногами в бойовій стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання удару рукою, збоку (лівою, правою).</li>
+                        <li>Виконання удару рукою, зворотний бічний (лівою, правою).</li>
+                        <li>Виконання удару ногою, збоку (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з двох і більше ударів руками, ногами (На основі
+                            вивченого матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Володіння технікою
+                        захисту від ударів руками, ногами в бойовій стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Захист від ударів руками збоку в голову: відходами, ухилами, підставками, відбивами
+                            (блоками) та нирками.</li>
+                        <li>Захист від ударів руками збоку в тулуб: відходами та підставками, відбивами (блоками).</li>
+                        <li>Захист від ударів ногами збоку в голову: підставками, відбивами (блоками), відходами.</li>
+                        <li>Захист від ударів ногами збоку в тулуб: підставками, відбивами (блоками), відходом назад.
+                        </li>
+                        <li>Захист від ударів збоку по ногах: підставками, відбиваючи (блоками), відходом назад.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        роботи в парах (удари руками, ногами і захист від них).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання 4 комбінацій, які складаються з різних видів ударів руками, ногами та захисту від
+                            них (На основі вивченого матеріалу).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        виконання кидків.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Збивання ривком за руку.</li>
+                        <li>Збивання ривком за голову.</li>
+                        <li>Збивання захопленням двох ніг спереду.</li>
+                        <li>Збивання захопленням двох ніг при підході ззаду.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Володіння технікою
+                        боротьби в положенні лежачи, партер.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Перегинання ліктя захопленням руки між ніг перекиданням (в.п. партер).</li>
+                        <li>Перегинання ліктя захопленням руки між ніг закидання-шкереберть (в.п. партер).</li>
+                        <li>Перегинання ліктя захопленням руки між ніг (в.п. противник лежачи на спині).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична реалізація
+                        вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Завдання 1. Атака: удар рукою збоку (в голову, в тулуб). Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                        <li>Завдання 2. Атака: удар ногою збоку (в голову, в тулуб, по ногах). Захист: на основі
+                            вивченого матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                        <li>Завдання 3. Атака: Захоплення за одяг однією рукою, двома руками. Захист: на основі
+                            вивченого матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+        <div id="blue-belt-page" class="page-content">
+            <div class="belt-header bg-blue11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-blue" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">8 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Синій
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Базова майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загально-фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині, 6 разів.</li>
+                        <li>Згинання розгинання рук в упорі лежачи – 22 рази.</li>
+                        <li>Піднімання тулуба с положення лежачи, руки за голову – 40 разів.</li>
+                        <li>Піднімання ніг с положення лежачи, за голову руки вздовж тіла прямі – 40 разів.</li>
+                        <li>Підйом тулуба і ніг лежачи на животі руки вздовж тіла прямі долонями до пола – 40 разів.
+                        </li>
+                        <li>Вправа «Планка» в упорі на ліктях – 75с.</li>
+                        <li>Комплекс Берпі «burpee», стандартний варіант с віджиманням – 35 раз.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Переворот в сторону (колесо) з стійки боком у напрямку руху.</li>
+                        <li>Перекид вперед через двох партнерів, що стоять в партері (в.п. стійка).</li>
+                        <li>Самострахування при падінні назад з поворотом на 180 ° (в.п. стійка).</li>
+                        <li>Самострахування після перекиду через плече з відривом (в.п. стійка).</li>
+                        <li>Стойка на голові зігнувши ноги (10 сек).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Спеціальна технічна
+                        підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів руками, ногами в бойовій стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання удару рукою, знизу (лівою, правою).</li>
+                        <li>Виконання удару рукою, зверху (лівою, правою).</li>
+                        <li>Виконання удару ногою, в сторону (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з двох і більше ударів руками, ногами. (На основі
+                            вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Володіння технікою
+                        захисту від ударів руками, ногами в бойовій стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Захист від ударів руками знизу в голову: ухилами, підставками і відбивами (блоками).</li>
+                        <li>Захист від ударів руками знизу в тулуб: підставками, відбивами (блоками).</li>
+                        <li>Захист від ударів ногами в сторону в тулуб: відходом, відбивами, кроками з поворотом.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        роботи в парах. (удари руками, ногами і захист від них).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання 4 комбінацій, які складаються з різних видів ударів руками, ногами та захисту від
+                            них. (На основі вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        виконання кидків.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Передня підніжка.</li>
+                        <li>Переворот нирком за руку і ногу.</li>
+                        <li>Збивання перекиданням при підході ззаду.</li>
+                        <li>Через спину з колін.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Володіння технікою
+                        боротьби в положенні лежачи, партер.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Вивертання плеча (вузол плеча) підніманням ліктя (з положення утримання з боку).</li>
+                        <li>Вивертання плеча (вузол плеча) підніманням ліктя (з положення утримання поперек).</li>
+                        <li>Защемлення Ахіллесова сухожилля (з положення противник лежачи на спині).</li>
+                        <li>Обмеження Ахіллесова сухожилля (з положення противник лежачи на животі).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична реалізація
+                        вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Завдання 1. Атака: удар рукою знизу в голову (в голову, в тулуб). Захист: на основі
+                            вивченого матеріалу Контратака: на основі вивченого матеріалу</li>
+                        <li>Завдання 2. Атака: удар рукою зверху в голову (в голову). Захист: на основі вивченого
+                            матеріалу Контратака: на основі вивченого матеріалу</li>
+                        <li>Завдання 3. Атака: удар ногою в сторону Захист: на основі вивченого матеріалу Контратака: на
+                            основі вивченого матеріалу.</li>
+                        <li>Завдання 4. Атака: обхват тулуба при підході спереду без рук, з руками Захист: на основі
+                            вивченого матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="blue-belt-b-page" class="page-content">
+            <div class="belt-header bg-blue11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-blue-yellow" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">7 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Синій з
+                    смужкою
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Базова майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загально-фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині, 6 разів.</li>
+                        <li>Згинання розгинання рук в упорі лежачи – 24 рази.</li>
+                        <li>Піднімання тулуба с положення лежачи, руки за голову – 45 разів.</li>
+                        <li>Піднімання ніг с положення лежачи, за голову руки вздовж тіла прямі – 45 раз.</li>
+                        <li>Підйом тулуба і ніг лежачи на животі руки вздовж тіла прямі долонями до пола – 45 разів.
+                        </li>
+                        <li>Вправа «Планка» в упорі на ліктях – 90с.</li>
+                        <li>Комплекс Берпі «burpee», стандартний варіант с віджиманням – 40 раз.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Переворот в сторону (Рондад) з поворотом на 90° з з'єднанням ніг в середині руху.</li>
+                        <li>Самострахування при падінні назад з поворотом на 180 ° зі стрибком (в.п. стійка).</li>
+                        <li>Самострахування при падінні на спину стрибком (в.п. стійка).</li>
+                        <li>Самострахування при падінні на бік з поворотом на 270 °. (в.п. упор лежачи).</li>
+                        <li>Стійка на голові (10 сек).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Спеціальна технічна
+                        підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів руками, ногами в бойовій стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання удару ногою, зворотній збоку .</li>
+                        <li>Виконання 4 комбінацій, які складаються з двох і більше ударів руками, ногами. (На основі
+                            вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Володіння технікою
+                        захисту від ударів руками, ногами в бойовій стійці на місці, в пересуванні.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання 4 комбінацій, які складаються з одного і більше видів захисту від ударів руками,
+                            ногами. (На основі вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        роботи в парах. (удари руками, ногами і захист від них). (На основі вивченого матеріалу).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання 4 комбінацій, які складаються з різних видів ударів руками, ногами.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        виконання кидків.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Через стегно.</li>
+                        <li>Зачіп зовні.</li>
+                        <li>Зачіп з нутрі.</li>
+                        <li>Підсіканням.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Володіння технікою
+                        боротьби в положенні лежачи, партер.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Перегинання колінного суглоба (з положення противник лежачи на спині).</li>
+                        <li>Перегинання колінного суглоба (з положення противник лежачи на животі).</li>
+                        <li>Викручування тазостегнового суглоба (з положення противник лежачи на спині).</li>
+                        <li>Викручування тазостегнового суглоба (з положення противник лежачи на животі).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична реалізація
+                        вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Завдання 1. Атака: удари руками (прямий, збоку, знизу, зверху) 2 різновиди атак. Захист: на
+                            основі вивченого матеріалу. Контратака: на основі вивченого матеріалу</li>
+                        <li>Завдання 2. Атака: удари ногами (вперед, збоку, в сторону). 2 різновиди атак. Захист: на
+                            основі вивченого матеріалу. Контратака: на основі вивченого матеріалу</li>
+                        <li>Завдання 3. Атака: Обхват тулуба при підході ззаду без рук, з руками. Захист: на основі
+                            вивченого матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                        <li>Завдання 4. Атака: захват за руки, за одяг. 2 різновиди атак. Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="yellow-belt-page" class="page-content">
+            <div class="belt-header bg-yellow11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-yellow" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">6 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Жовтий
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Спеціалізована майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загально-фізична
+                        підготовленість.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині — 8 разів.</li>
+                        <li>Виконання комплексу вправ (10+10+10+10) — 3 рази.</li>
+                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться по 10 разів без пауз та з високим рівнем технічного виконання, без
+                            відпочинку між вправами.</i></p>
+
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>З положення стоячи прийняти «гімнастичний міст» з відривом голови від килима.</li>
+                        <li>Виконання 2х комплексів гімнастичних вправ (1 + 1) на вибір комісії.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Спеціальна технічна
+                        підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів у бойовій стійці (на місці, в пересуванні).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання ударів ребром долоні збоку, зворотний збоку, зверху, вперед (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з трьох і більше ударів руками, ногами.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Виконання больових
+                        прийомів у стійці.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Важіль руки назовні (ВРН).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        захисту від ударів руками.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атака: удари руками — прямий, знизу, зворотний збоку, зверху. Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу (ВРН).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        виконання кидків.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Через голову.</li>
+                        <li>Підсіданням.</li>
+                        <li>Підхватом.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Виконання спеціальних
+                        технічних комплексів.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Кидки на час — 10 кидків за 40 сек.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична реалізація
+                        вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника в стійці.</li>
+                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">5</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">1</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>відсутній</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="yellow-belt-b-page" class="page-content">
+            <div class="belt-header bg-yellow11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-yellow-green" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">5 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Жовтий з
+                    смужкою
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Спеціалізована майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загально-фізична
+                        підготовленість</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині — 9 разів.</li>
+                        <li>Виконання комплексу вправ (10+10+10+10) — 3 рази.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться по 10 разів без пауз та з високим рівнем технічного виконання, без
+                            відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Переворот вперед з опорою на руки і голову.</li>
+                        <li>Виконання 3 комплексів гімнастичних вправ (1 + 1) на вибір комісії.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Спеціальна
+                        технічна підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів
+                        у бойовій стійці (на місці, в пересуванні).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання ударів ліктями збоку, знизу, зверху, назад (лівою, правою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з трьох і більше ударів руками, ногами.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Виконання больових
+                        прийомів у стійці.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Важіль руки всередину (ВРВ).</li>
+                        <li>Важіль руки через передпліччя (ВРП).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        захисту
+                        від ударів руками.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атака: удари руками — прямий, зворотний збоку, зверху. Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу (ВРП та ВРВ).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        виконання кидків.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Через плечі (млин).</li>
+                        <li>Прогином.</li>
+                        <li>Подвійним подбиванням (ножиці).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Виконання спеціальних
+                        технічних комплексів.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Кидки на час — 10 кидків за 35 сек.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична
+                        реалізація вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника в стійці.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">2</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>відсутній</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="green-belt-page" class="page-content">
+            <div class="belt-header bg-green11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-green" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">4 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Зелений
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Спеціалізована майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загально-фізична
+                        підготовленість</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині — 9 разів.</li>
+                        <li>Виконання комплексу вправ (10+10+10+10) — 4 рази.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться по 10 разів без пауз та з високим рівнем технічного виконання, без
+                            відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Переворот вперед з опорою на руки.</li>
+                        <li>Виконання 4 комплексів гімнастичних вправ (1 + 1) на вибір комісії.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Спеціальна
+                        технічна підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів
+                        у бойовій стійці (на місці, в пересуванні).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання ударів колінами вперед, збоку, знизу (лівою, правою ногою).</li>
+                        <li>Виконання 4 комбінацій, які складаються з трьох і більше ударів руками, ногами.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Виконання больових
+                        прийомів у стійці.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Вивертання руки зверху (ВРЗ).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        захисту
+                        від ударів руками.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атака: удари руками — прямий, зворотний збоку, зверху. Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу (ВРЗ).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        захисту
+                        та нападу в положенні полустоячи (атакуючий на коліні (колінах) — противник стоячи).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Збивання поворотом знизу через руку.</li>
+                        <li>Збивання нахилом знизу захопленням ніг.</li>
+                        <li>Збивання прогином знизу упором стопою в живіт.</li>
+                        <li>Збивання обертанням знизу з переходом на важіль ліктя.</li>
+                        <li>Збивання закиданням через плечі знизу.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Виконання спеціальних
+                        технічних комплексів.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Кидки на час — 15 кидків за 45 сек.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична
+                        реалізація вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника в стійці.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">3</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>відсутній</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="green-belt-b-page" class="page-content">
+            <div class="belt-header bg-green11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-green-brown" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">3 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Зелений з
+                    смужкою
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Спеціалізована майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загально-фізична
+                        підготовленість</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Підтягування на перекладині — 10 разів.</li>
+                        <li>Виконання комплексу вправ (10+10+10+10) — 5 раз.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться по 10 разів без пауз та з високим рівнем технічного виконання, без
+                            відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Темповий переворот вперед з опорою на руки.</li>
+                        <li>Виконання 5 комплексів гімнастичних вправ (1 + 1) на вибір комісії.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Спеціальна
+                        технічна підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів
+                        у бойовій стійці (на місці, в пересуванні).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання 4 комбінацій, які складаються з трьох і більше ударів ребром долоні, ліктями,
+                            колінами.</li>
+                        <li>Виконання 4 комбінацій, які складаються з трьох і більше ударів руками, ногами.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Виконання больових
+                        прийомів у стійці.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Загин руки за спину (ЗРЗ).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Володіння технікою
+                        захисту
+                        від ударів руками.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атака: удари руками — прямий, збоку, зворотний збоку, знизу, зверху. Захист: на основі
+                            вивченого матеріалу. Контратака: на основі вивченого матеріалу (ЗРЗ).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Володіння технікою
+                        захисту
+                        та нападу в положенні лежачи (атакуючий на спині, на боку).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Захист від ударів руками (противник стоїть - той, хто захищається лежить на спині ногами до
+                            противника).</li>
+                        <li>Захист від ударів ногами (противник стоїть - той, хто захищається лежить на боку до
+                            противника).</li>
+                        <li>Збивання нахилом лежачи захопленням ніг (ноги) двома руками (противник стоїть - той, хто
+                            захищається лежить на животі головою до ніг).</li>
+                        <li>Збивання провертаючись, вузлом ноги (ногами) (противник стоїть - той, хто захищається лежить
+                            на животі ногами до ніг).</li>
+                        <li>Збивання лежачи захопленням п'ят (противник стоїть - той, хто захищається лежить на спині
+                            ногами до противника).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Виконання спеціальних
+                        технічних комплексів.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Кидки на час — 20 кидків за 50 сек.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична
+                        реалізація вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника в стійці.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>відсутній</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="brown-belt-page" class="page-content">
+            <div class="belt-header bg-brown11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-brown" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">2 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Коричневий
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Підготовка до вищої майстерності
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Загально-фізична
+                        підготовленість</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання комплексу вправ.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Підтягування на перекладині</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 5</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться максимальну кількість разів без пауз та з високим рівнем
+                            технічного виконання, без відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Елементи гімнастики,
+                        акробатики. Страхування і самострахування при виконанні гімнастичних і акробатичних вправ.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Виконання 3 комплексів гімнастичних вправ (1 + 1 + 1) на вибір комісії.</li>
+                        <li>Виконання 2 комплексів гімнастичних вправ (1 і більше) з предметом (палиця).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Спеціальна
+                        технічна підготовленість.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Володіння попередніми
+                        рівнями.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Володіння технікою
+                        ударів
+                        у бойовій стійці (на місці, в пересуванні).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Зі зброєю (палицею).</li>
+                        <li>Виконання 4 комбінацій, які складаються з трьох і більше ударів (руками, ногами).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Володіння технікою
+                        захисту
+                        від загрози або атак зброєю.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атаки: удари палицею зверху, збоку, збоку зворотний, вперед. Захист: на основі вивченого
+                            матеріалу. Контратака: на основі вивченого матеріалу.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Виконання спеціальних
+                        технічних комплексів.</h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва спеціального технічного комплексу</th>
+                                <th>Кількість, разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Перекид-кидок</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Кидки накатом</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Кидки на час (50 с)</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Практична
+                        реалізація вивченого матеріалу.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">5</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">1</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Зброя</td>
+                                <td>палиця</td>
+                            </tr>
+                            <tr>
+                                <td>Положення при нападі</td>
+                                <td>стійка, стійка на колінах, положення лежачи</td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>так</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Тренувальний спаринг (6 поєдинків по 2 хвилини)</li>
+                    </ul>
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="brown-belt-b-page" class="page-content">
+            <div class="belt-header bg-brown11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-brown-black" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">2 кю</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Коричневий з
+                    смужкою
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Підготовка до вищої майстерності
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Загально-фізична підготовленість
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання комплексу вправ.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Підтягування на перекладині</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>55</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 5</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться максимальну кількість разів без пауз та з високим рівнем
+                            технічного виконання, без відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Елементи гімнастики, акробатики. Страхування і самострахування при виконанні гімнастичних і
+                        акробатичних вправ.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння попередніми рівнями підготовки.</li>
+                        <li>Виконання 3 комплексів гімнастичних вправ (1 + 1 + 1) на вибір комісії.</li>
+                        <li>Виконання 2 комплексів гімнастичних вправ з предметом (ніж, палиця).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Спеціальна технічна підготовленість.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Володіння попередніми рівнями.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Володіння технікою ударів у бойовій стійці (на місці, в пересуванні).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>З використанням зброї (ніж).</li>
+                        <li>Виконання 4 комбінацій, які складаються з трьох і більше ударів (руками, ногами).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Володіння технікою захисту від загрози або атак зброєю.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атаки: удари ножем зверху, збоку, збоку зворотний, вперед. Захист і контратака — на основі
+                            вивченого матеріалу.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Виконання спеціальних технічних комплексів.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва спеціального технічного комплексу</th>
+                                <th>Кількість, разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Перекид-кидок</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Кидки накатом</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Кидки на час (55 с)</td>
+                                <td>22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Практична реалізація вивченого матеріалу.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">2</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Зброя</td>
+                                <td>палиця, ніж</td>
+                            </tr>
+                            <tr>
+                                <td>Положення при нападі</td>
+                                <td>стійка, стійка на колінах, положення лежачи</td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>так</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Тренувальний спаринг (8 поєдинків по 2 хвилини)</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="black-belt-page" class="page-content">
+            <div class="belt-header bg-black11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-black" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">1 дан</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Чорний
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Вища майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Загально-фізична підготовленість
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання комплексу вправ.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Підтягування на перекладині</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 5</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>90</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться максимальну кількість разів без пауз та з високим рівнем
+                            технічного виконання, без відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Елементи гімнастики, акробатики. Страхування і самострахування при виконанні гімнастичних і
+                        акробатичних вправ.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння базовим, спеціалізованим і рівнем підготовки до вищої майстерності.</li>
+                        <li>Виконання 2 комплексів гімнастичних вправ (1 + 1 + 1 + 1) на вибір комісії.</li>
+                        <li>Виконання 2 комплексів гімнастичних вправ (1 + 1 і більше) з предметом (ніж, палиця,
+                            пістолет).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Спеціальна технічна підготовленість.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Володіння попередніми рівнями.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Володіння технікою ударів у бойовій стійці (на місці, в пересуванні).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>З використанням зброї (пістолет).</li>
+                        <li>Виконання 5 комбінацій, які складаються з трьох і більше ударів (руками, ногами,
+                            палицею, ножем, пістолетом).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Володіння технікою захисту від загрози або атак зброєю.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атаки: загроза пістолетом при підході спереду, при підході ззаду, при спробі дістати зброю.
+                            (Захист: на основі вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Виконання спеціальних технічних комплексів.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва спеціального технічного комплексу</th>
+                                <th>Кількість, разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Перекид-кидок</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Кидки накатом</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Кидки на час (60 с)</td>
+                                <td>25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Практична реалізація вивченого матеріалу.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">3</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Зброя</td>
+                                <td>палиця, ніж, пістолет</td>
+                            </tr>
+                            <tr>
+                                <td>Положення при нападі</td>
+                                <td>стійка, стійка на колінах, положення лежачи</td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>так</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Тренувальний спаринг (10 поєдинків по дві хв.)</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+        <div id="black-belt-b-page" class="page-content">
+            <div class="belt-header bg-black11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-black-1" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">2 дан</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">
+                    Чорний з смужкою
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Вища майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Загально-фізична підготовленість
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання комплексу вправ.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Підтягування на перекладині</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>65</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 5</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>95</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться максимальну кількість разів без пауз та з високим рівнем
+                            технічного виконання, без відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Елементи гімнастики, акробатики. Страхування і самострахування при виконанні гімнастичних і
+                        акробатичних вправ.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння базовим, спеціалізованим і рівнем підготовки до вищої майстерності.</li>
+                        <li>Виконання 3 комплексів гімнастичних вправ (1 + 1 + 1 + 1) на вибір комісії.</li>
+                        <li>Виконання 3 комплексів гімнастичних вправ (1 + 1 і більше) з предметом (ніж, палиця,
+                            пістолет, автомат).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Спеціальна технічна підготовленість.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Володіння попередніми рівнями.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Володіння технікою ударів у бойовій стійці (на місці, в пересуванні).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>З використанням зброї (автомат).</li>
+                        <li>Виконання 5 комбінацій, які складаються з трьох і більше ударів (руками, ногами, палицею,
+                            ножем, пістолетом, автоматом).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Володіння технікою захисту від загрози або атак зброєю.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атаки: загроза автоматом при підході спереду, при підході ззаду. (Захист: на основі
+                            вивченого матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Виконання спеціальних технічних комплексів.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва спеціального технічного комплексу</th>
+                                <th>Кількість, разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Перекид-кидок</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Кидки накатом</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Кидки на час (70 с)</td>
+                                <td>28</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Практична реалізація вивченого матеріалу.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Зброя</td>
+                                <td>палиця, ніж, пістолет</td>
+                            </tr>
+                            <tr>
+                                <td>Положення при нападі</td>
+                                <td>стійка, стійка на колінах, положення лежачи</td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>так</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Тренувальний спаринг (12 поєдинків по дві хв.)</li>
+                    </ul>
+
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="black-belt-bb-page" class="page-content">
+            <div class="belt-header bg-black11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-black-2" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">3 дан</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">
+                    Чорний з двома смужками
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Вища майстерність
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Вимоги</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Загально-фізична підготовленість
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання комплексу вправ.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва</th>
+                                <th>К-ть разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Вправа 1</td>
+                                <td>Підтягування на перекладині</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 2</td>
+                                <td>Згинання розгинання рук в упорі лежачи</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 3</td>
+                                <td>Перехід з упору присівши в упор лежачи</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 4</td>
+                                <td>Піднімання тулуба, руки за головою</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Вправа 5</td>
+                                <td>Стрибок в гору з присіду, руки за головою</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Умови: всі вправи робляться максимальну кількість разів без пауз та з високим рівнем
+                            технічного виконання, без відпочинку між вправами.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Елементи гімнастики, акробатики. Страхування і самострахування при виконанні гімнастичних і
+                        акробатичних вправ.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Володіння базовим, спеціалізованим і рівнем підготовки до вищої майстерності.</li>
+                        <li>Виконання 4 комплексів гімнастичних вправ (1 + 1 + 1 + 1) на вибір комісії.</li>
+                        <li>Виконання 4 комплексів гімнастичних вправ (1 + 1 і більше) з предметом (ніж, палиця,
+                            пістолет, автомат).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Спеціальна технічна підготовленість.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Володіння попередніми рівнями.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Володіння технікою ударів у бойовій стійці (на місці, в пересуванні).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Виконання 6 комбінацій, які складаються з п’яти і більше ударів (руками, ногами, палицею,
+                            ножем, пістолетом, автоматом).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Володіння технікою захисту від загрози будь-якою зброєю.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Атаки: загроза зброєю при підході спереду, при підході ззаду. (Захист: на основі вивченого
+                            матеріалу).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Виконання спеціальних технічних комплексів.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Назва спеціального технічного комплексу</th>
+                                <th>Кількість, разів</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Кувирок-кидок</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Кидки накатом</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Кидки на час (80 с)</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Практична реалізація вивченого матеріалу.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Модельні ситуації — нейтралізація умовного нападу противника.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Умови:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Кількість модельних ситуацій</td>
+                                <td class="center-text">5</td>
+                            </tr>
+                            <tr>
+                                <td>Кількість нападників</td>
+                                <td class="center-text">5</td>
+                            </tr>
+                            <tr>
+                                <td>Технічні дії</td>
+                                <td>удари (руками, ногами), захоплення, обхоплення одягу, рук, волосся, шиї, тулуба.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Зброя</td>
+                                <td>палиця, ніж, пістолет</td>
+                            </tr>
+                            <tr>
+                                <td>Положення при нападі</td>
+                                <td>стійка, стійка на колінах, положення лежачи</td>
+                            </tr>
+                            <tr>
+                                <td>Елемент раптовості</td>
+                                <td>так</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Тренувальний спаринг (14 поєдинків по дві хв.)</li>
+                    </ul>
+
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Назад до списку
+                </button>
+            </div>
+        </div>
+
+
+        <div id="belts-page" class="page-content">
+            <h2 class="section-header-title">Система поясів</h2>
+
+            <div class="belts-list">
+                <a href="#" onclick="showPage('purple-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">14 кю</span>
+                        <div class="belt-rect bg-purple"></div> <span class="belt-name">Фіолетовий</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+
+
+                <a href="#" onclick="showPage('purple-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">13 кю</span>
+                        <div class="belt-rect bg-purple-red"></div> <span class="belt-name">Фіолетовий з смужкою</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+
+
+                <a href="#" onclick="showPage('red-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">12 кю</span>
+                        <div class="belt-rect bg-red"></div>
+                        <span class="belt-name">Червоний</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('red-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">11 кю</span>
+                        <div class="belt-rect bg-red-orange"></div>
+                        <span class="belt-name">Червоний з смужкою</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('orange-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">10 кю</span>
+                        <div class="belt-rect bg-orange"></div>
+                        <span class="belt-name">Помаранчевий</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('orange-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">9 кю</span>
+                        <div class="belt-rect bg-orange-blue"></div>
+                        <span class="belt-name">Помаранчевий з смужкою</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('blue-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">8 кю</span>
+                        <div class="belt-rect bg-blue"></div>
+                        <span class="belt-name">Синій</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('blue-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">7 кю</span>
+                        <div class="belt-rect bg-blue-yellow"></div>
+                        <span class="belt-name">Синій з смужкою</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('yellow-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">6 кю</span>
+                        <div class="belt-rect bg-yellow"></div>
+                        <span class="belt-name">Жовтий</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('yellow-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">5 кю</span>
+                        <div class="belt-rect bg-yellow-green"></div>
+                        <span class="belt-name">Жовтий з смужкою</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('green-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">4 кю</span>
+                        <div class="belt-rect bg-green"></div>
+                        <span class="belt-name">Зелений</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('green-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">3 кю</span>
+                        <div class="belt-rect bg-green-brown"></div>
+                        <span class="belt-name">Зелений з смужкою/span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('brown-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">2 кю</span>
+                        <div class="belt-rect bg-brown"></div>
+                        <span class="belt-name">Коричневий</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('brown-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">1 кю</span>
+                        <div class="belt-rect bg-brown-black"></div>
+                        <span class="belt-name">Коричневий з смужкою</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('black-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">1 дан</span>
+                        <div class="belt-rect bg-black"></div>
+                        <span class="belt-name">Чорний</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('black-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">2 дан</span>
+                        <div class="belt-rect bg-black-1"></div>
+                        <span class="belt-name">Чорний з однією смужкою</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('black-belt-bb'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">3 дан</span>
+                        <div class="belt-rect bg-black-2"></div>
+                        <span class="belt-name">Чорний з двома смужками</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center;">
+            <div class="footer-logo-block">
+                <a href="#" onclick="showPage('main'); return false;" class="logo-area oswald-font"
+                    style="justify-content: center;">
+                    <img src="fotoczki/ratibor foto.png" alt="Ratibor Logo" class="logo-img">
+                    <div class="logo-text">SK Ratibor</div>
+                </a>
+            </div>
+            <div style="margin-top: 20px; color: rgba(255, 255, 255, 0.5); font-size: 13px;">
+                Copyright © 2026 SK Ratibor - Веронiка Черкащенко
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleModal(show) {
+            const modal = document.getElementById('modal-update');
+            modal.style.display = show ? 'flex' : 'none';
+
+            // Блокируем прокрутку фона, когда окно открыто
+            document.body.style.overflow = show ? 'hidden' : 'auto';
+        }
+        function showPage(pageId) {
+            // Скрываем все страницы
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Показываем нужную
+            const activePage = document.getElementById(pageId + '-page') || document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.add('active');
+            } else {
+                console.warn('showPage: не найдена страница', pageId);
+            }
+
+            // Обновляем хлебные крошки
+            const breadcrumb = document.getElementById('breadcrumb');
+
+            if (pageId === 'main') {
+                breadcrumb.innerHTML = 'Головна';
+            } else if (pageId === 'about') {
+                breadcrumb.innerHTML = 'Головна / Про клуб';
+            } else if (pageId === 'belts') {
+                breadcrumb.innerHTML = 'Головна / Система поясів';
+            } else if (pageId === 'imgg') {
+                breadcrumb.innerHTML = 'Головна / Медіа';
+            } else if (pageId === 'purple-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Фіолетовий';
+            } else if (pageId === 'purple-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Фіолетовий із смужкою';
+            } else if (pageId === 'red-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Червоний';
+            } else if (pageId === 'red-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Червоний із смужкою';
+            } else if (pageId === 'orange-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Помаранчевий';
+            } else if (pageId === 'orange-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Помаранчевий із смужкою';
+            } else if (pageId === 'blue-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Синій';
+            } else if (pageId === 'blue-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Синій із смужкою';
+            } else if (pageId === 'yellow-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Жовтий';
+            } else if (pageId === 'yellow-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Жовтий із смужкою';
+            } else if (pageId === 'green-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Зелений';
+            } else if (pageId === 'green-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Зелений із смужкою';
+            } else if (pageId === 'brown-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Коричневий';
+            } else if (pageId === 'brown-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Коричневий із смужкою';
+            } else if (pageId === 'black-belt') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Чорний';
+            } else if (pageId === 'black-belt-b') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Чорний із смужкою';
+            } else if (pageId === 'black-belt-bb') {
+                breadcrumb.innerHTML = 'Головна / Система поясів / Чорний із двома смужками';
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        function toggleLangMenu(event) {
+            event.stopPropagation();
+            const menu = document.getElementById('lang-menu');
+            menu.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function () {
+            const menu = document.getElementById('lang-menu');
+            if (menu) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+
+    <div id="modal-update" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="oswald-font">Оновити дані профілю</h2>
+                <span class="close-modal" onclick="toggleModal(false)">Закрити ×</span>
+            </div>
+
+            <p class="modal-desc">
+                Запропонуйте зміни до профілю атлета — нове фото, коригування імені або іншу інформацію.
+            </p>
+
+            <form class="update-form" action="https://formsubmit.co/chernika056@gmail.com" method="POST"
+                enctype="multipart/form-data">
+
+                <!-- Налаштування FormSubmit -->
+                <input type="hidden" name="_subject" value="Запит на оновлення профілю: Вероніка">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <!-- Після відправки -->
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+
+                <!-- Антиспам -->
+                <input type="text" name="_honey" style="display:none">
+
+                <!-- Фото -->
+                <div class="form-group">
+                    <label>Нове фото (необов'язково)</label>
+
+                    <div class="file-input-wrapper">
+                        <button type="button" class="file-btn" onclick="document.getElementById('file-upload').click()">
+                            Виберіть файл
+                        </button>
+
+                        <span class="file-name" id="file-chosen">Файл не вибрано</span>
+
+                        <input type="file" id="file-upload" name="attachment" accept="image/*" style="display:none"
+                            onchange="document.getElementById('file-chosen').textContent = this.files[0] ? this.files[0].name : 'Файл не вибрано'">
+                    </div>
+                </div>
+
+                <!-- Ім'я / Прізвище -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Ім'я</label>
+                        <input type="text" name="first_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Прізвище</label>
+                        <input type="text" name="last_name" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <!-- Коментар -->
+                <div class="form-group">
+                    <label>Коментар</label>
+                    <textarea name="message" placeholder="Що саме потрібно оновити? Додаткові деталі..."></textarea>
+                </div>
+
+                <!-- Кнопка -->
+                <button type="submit" class="submit-btn oswald-font">
+                    Надіслати запит
+                </button>
+            </form>
+        </div>
+    </div>

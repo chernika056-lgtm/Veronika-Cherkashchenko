@@ -1,0 +1,4036 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veronika Cherkashchenko - SK RAtibor.com</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- ВАШИ ОРИГИНАЛЬНЫЕ СТИЛИ (БЕЗ ИЗМЕНЕНИЙ) --- */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #0b0b0b;
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body>.container {
+            flex: 1;
+        }
+
+        .container {
+            max-width: 1140px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .oswald-font {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 15px 0;
+            border-bottom: 1px solid #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+            border-radius: 2px;
+        }
+
+        .logo-text {
+            font-size: 16px;
+            letter-spacing: 0.1em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.2s, text-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #b71c1c;
+            text-shadow: 0 0 12px rgba(183, 28, 28, 0.45);
+        }
+
+        .lang-switch {
+            background: none;
+            border: 1px solid #333;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 5px 12px;
+            font-size: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-menu {
+            visibility: hidden;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: top right;
+            position: absolute;
+            top: calc(100% + 5px);
+            right: 0;
+            background: #0b0b0b;
+            border: 1px solid #333;
+            border-radius: 10px;
+            min-width: 140px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            overflow: hidden;
+            transition: transform 0.18s ease, opacity 0.18s ease, visibility 0.18s ease;
+        }
+
+        .lang-menu.show {
+            visibility: visible;
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        .lang-menu a {
+            display: block;
+            padding: 11px 16px;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: background 0.2s;
+        }
+
+        .lang-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .lang-menu a:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .lang-menu a.active {
+            color: #b71c1c;
+            font-weight: 700;
+            background: rgba(183, 28, 28, 0.08);
+        }
+
+        .breadcrumbs {
+            padding: 25px 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo-wrapper {
+            flex: 0 0 350px;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            display: block;
+        }
+
+        .profile-main-info {
+            flex: 1;
+            padding-top: 10px;
+        }
+
+        .athlete-id {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 11px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .athlete-name {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .belt-display {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #141414;
+            padding: 12px 15px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            border-left: 3px solid #550676;
+        }
+
+        .belt-color-bar {
+            width: 42px;
+            height: 20px;
+            background-color: #550676;
+            border-radius: 2px;
+        }
+
+        .belt-text-title {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .belt-text-sub {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .stats-summary {
+            display: flex;
+            gap: 15px;
+        }
+
+        .stat-card {
+            background-color: #141414;
+            padding: 15px 20px;
+            border-radius: 2px;
+            flex: 1;
+            border-left: 2px solid transparent;
+        }
+
+        .stat-card-value {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 3px;
+        }
+
+        .stat-card-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-card.wins {
+            border-left-color: #388e3c;
+        }
+
+        .stat-card.wins .stat-card-value {
+            color: #388e3c;
+        }
+
+        .stat-card.losses {
+            border-left-color: #d32f2f;
+        }
+
+        .stat-card.losses .stat-card-value {
+            color: #d32f2f;
+        }
+
+        .update-profile-banner {
+            background-color: #141414;
+            padding: 18px 20px;
+            border-radius: 2px;
+            border-left: 3px solid #b71c1c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .update-info-title {
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .update-info-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 12px;
+            max-width: 650px;
+            margin: 0;
+        }
+
+        .update-action-btn {
+            color: #b71c1c;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .section-header-title {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .result-item-card {
+            background-color: #141414;
+            padding: 18px;
+            border-radius: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 3px solid #737373;
+        }
+
+        .result-main-details {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .place-medallion {
+            width: 45px;
+            height: 45px;
+            background-color: #737373;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .event-title {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .event-metadata {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .event-tag-cat {
+            background-color: #222;
+            color: #b71c1c;
+            padding: 1px 5px;
+            border-radius: 2px;
+            font-size: 9px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .result-stats-w-l {
+            display: flex;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .res-stat-item .res-stat-val {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .res-stat-item .res-stat-lbl {
+            font-size: 9px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 700;
+        }
+
+        .res-stat-item.wins .res-stat-val {
+            color: #388e3c;
+        }
+
+        .res-stat-item.losses .res-stat-val {
+            color: #d32f2f;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            background-color: #000000;
+            padding: 50px 0;
+            margin-top: 70px;
+            border-top: 1px solid #1a1a1a;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        footer .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-logo-block {
+            margin-bottom: 12px;
+        }
+
+        .social-links-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icon-box {
+            width: 28px;
+            height: 28px;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+        }
+
+        .footer-column-title {
+            color: #ffffff;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-links-list li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links-list a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+            transition: color 0.2s;
+        }
+
+        .footer-links-list a:hover {
+            color: #ffffff;
+        }
+
+        /* --- НОВЫЕ СТИЛИ ДЛЯ ПОЯСОВ И ПЕРЕКЛЮЧЕНИЯ --- */
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        .belts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .belt-row {
+            position: relative;
+            background-color: #141414;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 3px solid #b71c1c;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .belt-row:hover {
+            background-color: #1c1c1c;
+        }
+
+        .belt-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .belt-lv {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 700;
+            position: static;
+            margin: 0;
+        }
+
+        .belt-rect {
+            width: 80px;
+            height: 35px;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .belt-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .arrow-icon {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+        }
+
+        .bg-purple11 {
+            background-color: #250e2e;
+        }
+
+        .bg-red11 {
+            background-color: #700c0c6e;
+        }
+
+        .bg-orange11 {
+            background-color: #b05a1348;
+        }
+
+        .bg-blue11 {
+            background-color: #0719568e;
+        }
+
+        .bg-yellow11 {
+            background-color: #bdab0866;
+        }
+
+        .bg-green11 {
+            background-color: #0e7b0a4a;
+        }
+
+        .bg-brown11 {
+            background-color: #482b0574;
+        }
+
+        .bg-black11 {
+            background-color: #0000006e;
+        }
+
+        /* Цвета поясов */
+        .bg-purple {
+            background-color: #550676;
+        }
+
+        .bg-purple-red {
+            background: linear-gradient(to bottom, #550676 40%, #ad0808 40%, #ad0808 60%, #550676 60%);
+        }
+
+        .bg-red {
+            background-color: #ad0808;
+        }
+
+        .bg-red-orange {
+            background: linear-gradient(to bottom, #ad0808 40%, #e07116 40%, #e07116 60%, #ad0808 60%);
+        }
+
+        .bg-orange {
+            background-color: #e07116;
+        }
+
+        .bg-orange-blue {
+            background: linear-gradient(to bottom, #e07116 40%, #0e35b3 40%, #0e35b3 60%, #e07116 60%);
+        }
+
+        .bg-blue {
+            background-color: #0e35b3;
+        }
+
+        .bg-blue-yellow {
+            background: linear-gradient(to bottom, #0e35b3 40%, #e7d109 40%, #e7d109 60%, #0e35b3 60%);
+        }
+
+        .bg-yellow {
+            background-color: #e7d109;
+        }
+
+        .bg-yellow-green {
+            background: linear-gradient(to bottom, #e7d109 40%, #0f870b 40%, #0f870b 60%, #e7d109 60%);
+        }
+
+        .bg-green {
+            background-color: #0f870b;
+        }
+
+        .bg-green-brown {
+            background: linear-gradient(to bottom, #0f870b 40%, #513106 40%, #513106 60%, #0f870b 60%);
+        }
+
+        .bg-brown {
+            background-color: #513106;
+        }
+
+        .bg-brown-black {
+            background: linear-gradient(to bottom, #513106 40%, #101010 40%, #101010 60%, #513106 60%);
+        }
+
+        .bg-black {
+            background-color: #101010;
+            border: 1px solid #2d2d2d;
+        }
+
+        .bg-black-1 {
+            background: linear-gradient(to bottom, #101010 40%, #d6b811 40%, #d6b811 60%, #101010 60%);
+            border: 1px solid #2d2d2d;
+        }
+
+        .bg-black-2 {
+            background: linear-gradient(to bottom,
+                    #101010 35%,
+                    /* Верхний черный блок (до 40%) */
+                    #d6b811 35%,
+                    /* Начало 1-й полосы */
+                    #d6b811 45%,
+                    /* Конец 1-й полосы */
+                    #101010 45%,
+                    /* Разделитель между полосами */
+                    #101010 60%,
+                    /* Разделитель между полосами */
+                    #d6b811 60%,
+                    /* Начало 2-й полосы */
+                    #d6b811 70%,
+                    /* Конец 2-й полосы */
+                    #101010 75%
+                    /* Нижний черный блок (после 60%) */
+                );
+            border: 1px solid #2d2d2d;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Стили для модального окна */
+        .modal-overlay {
+            display: none;
+            /* Скрыто по умолчанию */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #141414;
+            width: 100%;
+            max-width: 700px;
+            padding: 30px;
+            border-left: 4px solid #b71c1c;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .close-modal {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .modal-desc {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .update-form input,
+        .update-form textarea {
+            width: 100%;
+            background-color: #0b0b0b;
+            border: 1px solid #2d2d2d;
+            padding: 12px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .update-form textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .file-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .file-btn {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            padding: 6px 15px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .file-name {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .submit-btn {
+            background-color: #b71c1c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        ::selection {
+            background: #b71c1c;
+            color: white;
+        }
+
+        ::-moz-selection {
+            background: #b71c1c;
+            color: white;
+        }
+
+        /* ауф таблицы */
+
+        table {
+            width: 650px;
+            border-collapse: collapse;
+            border: 2px solid #ccc;
+            /* Изменено на белый цвет, как в комментарии */
+            margin-bottom: 20px;
+            background: transparent;
+            font-family: sans-serif;
+            /* Добавлен шрифт для аккуратности */
+        }
+
+        th,
+        td {
+            border: 2px solid #ccc;
+            /* Изменено на белый цвет */
+            padding: 10px;
+            background: transparent;
+            color: #ccc;
+            /* Изменено на белый цвет */
+            text-align: left;
+            /* Текст по левому краю по умолчанию */
+        }
+
+        th {
+            font-weight: bold;
+            text-align: center;
+            /* Заголовок по центру */
+        }
+
+        /* Класс для ячеек, которые нужно отцентрировать */
+        .center-text {
+            color: #ccc;
+        }
+
+        /* Стили для <i> оставлены, на случай если ты добавишь этот тег позже */
+        i {
+            color: #ccc;
+            font-style: italic;
+            display: inline-block;
+            position: relative;
+            top: -12px;
+        }
+
+        img {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* Убираем стандартную полосу прокрутки */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        /* Черный фон полосы */
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        /* Красный ползунок */
+        ::-webkit-scrollbar-thumb {
+            background: #750000;
+            border-radius: 0;
+            border: 2px solid #000;
+        }
+
+        /* При наведении чуть ярче */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #750000;
+        }
+
+        /* Для Firefox */
+        html {
+            scrollbar-color: #750000 #000000;
+            scrollbar-width: auto;
+        }
+
+        /* ===== СОЦСЕТИ — ИСПРАВЛЕННАЯ ВЕРСИЯ ===== */
+        /* ===== СОЦСЕТИ ===== */
+        .social-section {
+            margin-top: 45px;
+            text-align: left;
+        }
+
+        .social-section h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            /* расстояние между иконками */
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: inline-block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            pointer-events: auto !important;
+        }
+
+        .social-link:hover {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+        }
+
+        .social-img {
+            width: 55px;
+            /* размер */
+            height: 55px;
+            /* размер */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+            pointer-events: auto !important;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .belt-lv {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: bold;
+            position: absolute;
+            margin-top: -55px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 1024px) {
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                gap: 12px;
+                justify-content: center;
+            }
+            nav {
+                width: 100%;
+                min-width: 0;
+            }
+            .profile-section {
+                flex-wrap: wrap;
+            }
+            .profile-photo-wrapper {
+                flex: 1 1 280px;
+                min-width: 240px;
+                max-width: 100%;
+            }
+            .profile-main-info {
+                flex: 1 1 360px;
+            }
+            .athlete-name {
+                font-size: 36px;
+            }
+            .update-profile-banner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 18px;
+            }
+            .update-info-desc {
+                max-width: 100%;
+            }
+            .result-item-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .event-metadata {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .result-stats-w-l {
+                flex-wrap: wrap;
+                gap: 14px;
+                margin-top: 15px;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .modal-content {
+                max-width: 90%;
+                padding: 24px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .about-text {
+                max-width: 100%;
+            }
+            table {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 680px) {
+            header {
+                padding: 12px 0;
+            }
+            .container {
+                padding: 0 12px;
+            }
+            .logo-text {
+                font-size: 14px;
+            }
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 11px;
+            }
+            .lang-switch {
+                width: 100%;
+            }
+            .lang-dropdown {
+                width: 100%;
+            }
+            .breadcrumbs {
+                padding: 18px 0;
+                font-size: 10px;
+            }
+            .profile-section {
+                flex-direction: column;
+            }
+            .profile-photo-wrapper {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .belt-display {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .stats-summary {
+                flex-direction: column;
+            }
+            .section-header-title {
+                font-size: 24px;
+            }
+            .result-item-card {
+                gap: 16px;
+            }
+            .event-title {
+                font-size: 14px;
+            }
+            .social-icons {
+                gap: 10px;
+            }
+            .social-img {
+                width: 48px;
+                height: 48px;
+            }
+            .modal-content {
+                padding: 18px;
+            }
+            .submit-btn {
+                width: 100%;
+            }
+            footer {
+                padding: 30px 0;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            table {
+                min-width: 100%;
+            }
+            .belt-header {
+                padding: 40px 16px;
+            }
+            .belt-header .belt-rect {
+                width: 110px;
+                height: 45px;
+            }
+            .belt-header h1 {
+                font-size: 34px;
+            }
+            .requirements-box {
+                padding: 20px;
+            }
+            .file-input-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .file-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" onclick="showPage('main'); return false;" class="logo-area oswald-font">
+                <img src="fotoczki/ratibor foto.png" alt="Ratibor Logo" class="logo-img">
+                <div class="logo-text">SK Ratibor</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('main'); return false;">Strona główna</a></li>
+                    <li><a href="#" onclick="showPage('about'); return false;">O klubie</a></li>
+                    <li><a href="#" onclick="showPage('belts'); return false;">Pasy</a></li>
+                    <li><a href="#" onclick="showPage('imgg'); return false;">Media</a></li>
+                </ul>
+            </nav>
+            <div class="lang-dropdown">
+                <button class="lang-switch" onclick="toggleLangMenu(event)">PL ˇ</button>
+                <div id="lang-menu" class="lang-menu" onclick="event.stopPropagation()">
+                    <a href="index.html">Русский</a>
+                    <a href="ua.html">Українська</a>
+                    <a href="pl.html" class="active">Polski</a>
+                    <a href="en.html">English</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumbs" id="breadcrumb">
+            Strona główna
+        </div>
+
+        <div id="main-page" class="page-content active">
+            <div class="profile-section">
+                <div class="profile-photo-wrapper">
+                    <img src="fotoczki/moje foto.jpg" alt="Veronika" class="profile-photo">
+                </div>
+                <div class="profile-main-info">
+                    <div class="athlete-id">07.08.2010</div>
+                    <h1 class="athlete-name">Veronika Cherkashchenko</h1>
+                    <div class="belt-display">
+                        <div class="belt-color-bar"></div>
+                        <div class="belt-text-block">
+                            <div class="belt-text-title">Fioletowy</div>
+                            <div class="belt-text-sub">Base</div>
+                        </div>
+                    </div>
+                    <div class="stats-summary">
+                        <div class="stat-card wins">
+                            <div class="stat-card-value">0</div>
+                            <div class="stat-card-label">Wygrane</div>
+                        </div>
+                        <div class="stat-card losses">
+                            <div class="stat-card-value">2</div>
+                            <div class="stat-card-label">Przegrane</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/nikusi.ik?igsh=cWZpc3JhenMyZWN2" target="_blank"
+                                class="social-link">
+                                <img src="fotoczki/Instagram.png" alt="Instagram" class="social-img">
+                            </a>
+                            <a href="https://t.me/kotyaraii" target="_blank" class="social-link">
+                                <img src="fotoczki/telegram.png" alt="telegram" class="social-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="update-profile-banner">
+                <div class="update-info-text">
+                    <h4 class="update-info-title">Aktualizuj dane profilu</h4>
+                    <p class="update-info-desc">Zaproponuj zmiany w profilu sportowca — nowe zdjęcie, korektę imienia
+                        lub inne informacje. Autor je rozpatrzy.</p>
+                </div>
+
+                <a href="#" onclick="toggleModal(true); return false;" class="update-action-btn">Aktualizuj +</a>
+            </div>
+            <h2 class="section-header-title">Wyniki turniejów</h2>
+
+            <div class="result-item-card" style="margin-bottom: 15px;">
+                <div class="result-main-details">
+                    <div class="place-medallion">2</div>
+                    <div class="event-text">
+                        <h4 class="event-title">Memoriał Oleksandra Gorbatiuka</h4>
+                        <div class="event-metadata"><span>18-04-2026</span><span class="event-tag-cat">Base</span></div>
+                    </div>
+                </div>
+                <div class="result-stats-w-l">
+                    <div class="res-stat-item wins">
+                        <div class="res-stat-val">0</div>
+                        <div class="res-stat-lbl">Wygrane</div>
+                    </div>
+                    <div class="res-stat-item losses">
+                        <div class="res-stat-val">1</div>
+                        <div class="res-stat-lbl">Przegrane</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="result-item-card" style="margin-bottom: 15px;">
+                <div class="result-main-details">
+                    <div class="place-medallion">2</div>
+                    <div class="event-text">
+                        <h4 class="event-title">Challenge Ju-Jitsu Sport</h4>
+                        <div class="event-metadata"><span>11-10-2025</span><span class="event-tag-cat">Base</span></div>
+                    </div>
+                </div>
+                <div class="result-stats-w-l">
+                    <div class="res-stat-item wins">
+                        <div class="res-stat-val">0</div>
+                        <div class="res-stat-lbl">Wygrane</div>
+                    </div>
+                    <div class="res-stat-item losses">
+                        <div class="res-stat-val">1</div>
+                        <div class="res-stat-lbl">Przegrane</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="about-page" class="page-content">
+            <div class="profile-section">
+                <div class="profile-photo-wrapper">
+                    <img src="fotoczki/ratibor foto1.png" alt="Logo" class="profile-photo">
+                </div>
+                <div class="profile-main-info">
+                    <h1 class="athlete-name">O klubie SK Ratibor</h1>
+                    <div class="about-text">
+                        SK Ratibor to klub sportowy łączący sporty walki i walkę wręcz. Tworzymy środowisko, w którym
+                        sportowcy rozwijają siłę, technikę i charakter, niezależnie od poziomu zaawansowania.
+
+                        Podstawą procesu treningowego są dyscyplina, szacunek oraz systematyczne podejście do nauki. W
+                        klubie zwracamy uwagę zarówno na technikę bazową, jak i przygotowanie do zawodów: od pierwszych
+                        kroków na macie po udział w turniejach.
+
+                        Treningi obejmują elementy zapasów, technik uderzeniowych oraz przygotowania funkcjonalnego, co
+                        pozwala rozwijać wytrzymałość, koordynację i pewność siebie. Pracujemy z dziećmi, młodzieżą i
+                        dorosłymi, pomagając każdemu odkryć jego potencjał.
+
+                        SK Ratibor to nie tylko sport, ale także społeczność, w której ceni się pracę, wzajemne wsparcie
+                        i dążenie do zwycięstwa.
+                        <br>
+                        <!-- Media społecznościowe -->
+                        <div class="social-section">
+                            <h2 class="section-header-title" style="color: white; margin-top: -27px;">Jesteśmy w mediach
+                                społecznościowych</h2>
+
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/skratibor?igsh=MWRyN3lvd3h4eWkyeQ==" target="_blank"
+                                    class="social-link">
+                                    <img src="fotoczki/Instagram.png" alt="Instagram" class="social-img">
+                                </a>
+
+                                <a href="https://www.facebook.com/share/1BKYGiWaxF/" target="_blank"
+                                    class="social-link">
+                                    <img src="fotoczki/Facebook.png" alt="Facebook" class="social-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="imgg-page" class="page-content">
+            <div class="media-page-section" style=" color: white;">
+                <h2 class="section-header-title">Media</h2>
+                <div
+                    style="background: #1a1a1a; border: 1px solid #700c0c6e; border-radius: 16px; padding: 30px; margin-top: 20px;">
+                    <p style="font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.82); margin: 0;">
+                        Strona jest w przygotowaniu.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="purple-belt-page" class="page-content">
+            <div class="belt-header bg-purple11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect"
+                    style="background-color: #550676; margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">14 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Fioletowy
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo początkowe
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uginanie i prostowanie ramion (p.w. podpór przodem lub na kolanach) – 10 razy.</li>
+                        <li>Unoszenie tułowia (p.w. leżenie tyłem, ręce za głową lub proste wzdłuż tułowia) – 10 razy.
+                        </li>
+                        <li>Przenoszenie nóg za głowę (p.w. leżenie tyłem, ręce proste wzdłuż tułowia) – 10 razy.</li>
+                        <li>Jednoczesne unoszenie tułowia i nóg (p.w. leżenie przodem, ręce proste wzdłuż tułowia) – 10
+                            razy.
+                        </li>
+                        <li>Unoszenie bioder (p.w. leżenie tyłem, nogi ugięte, ręce proste wzdłuż tułowia) – 10 razy.
+                        </li>
+                        <li>Przejście do planku (deski) w podporze na prostych rękach (p.w. stojąc) – 10 razy.</li>
+                        <li>Kompleks burpee, wariant ułatwiony – 10 razy.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-top: 25px; margin-bottom: 15px;">II.
+                        Elementy gimnastyki, akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń
+                        gimnastycznych i akrobatycznych.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Przetoczenia w bok (p.w. leżenie tyłem, ręce w górze).</li>
+                        <li>Przetoczenia w tył (p.w. siad kulony).</li>
+                        <li>Fiksacja pozycji końcowej przy padzie w bok na bok.</li>
+                        <li>Przetoczenie z jednego boku na drugi z fiksacją pozycji końcowej przy padzie w bok.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-top: 25px; margin-bottom: -5px;">III.
+                        Specjalistyczne przygotowanie techniczne.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">1.
+                        Ustawienie, komendy.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Powitanie, zbiórka, wyrównaj, baczność, spocznij.</li>
+                        <li>Ustawienie w szeregu, w kolumnie, rozliczanie.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">2.
+                        Znajomość pozycji i postaw.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Postawa zasadnicza, walki (lewostronna, prawostronna), frontalna (szkoleniowa).</li>
+                        <li>Pozycja na kolanach, na prawym (lewym) kolanie.</li>
+                        <li>Pozycja parter.</li>
+                        <li>Pozycja leżenie przodem (ręce w przód, w bok, wzdłuż tułowia).</li>
+                        <li>Pozycja leżenie tyłem (ręce w przód, w bok, wzdłuż tułowia, nogi ugięte).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">3.
+                        Technika uderzeń rękami i nogami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzeń prostych rękami (lewa, prawa).</li>
+                        <li>Wykonywanie uderzeń kolanem w przód (lewe, prawe).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">4.
+                        Technika obrony przed uderzeniami rękami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie techniki obronnej polegającej na zbijaniu (bloku) z góry w dół i z dołu w górę.
+                        </li>
+                        <li>Wykonywanie 2 kombinacji składających się z obrony i uderzeń (na podstawie przerobionego
+                            materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">5.
+                        Technika poruszania się.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Poruszanie się w postawie frontalnej krokiem dostawnym (przód-tył, prawo-lewo).</li>
+                        <li>Poruszanie się na kolanach (p.w. postawa na jednym kolanie).</li>
+                        <li>Poruszanie się w leżeniu tyłem, w leżeniu przodem.</li>
+                        <li>Poruszanie się w uchwycie z partnerem krokiem zwykłym, krokiem dostawnym (przód-tył,
+                            prawo-lewo).
+                        </li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">6.
+                        Technika walki.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uchwyty za nadgarstki, za ręce pod łokciami.</li>
+                        <li>Uchwyty za klapę kimona i rękaw (jednostronny, dwustronny).</li>
+                        <li>Uchwyty ubrania na barkach.</li>
+                        <li>Uchwyty ubrania na piersi.</li>
+                        <li>Uchwyty ubrania na piersi na krzyż.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-top: 25px; margin-bottom: -10px;">7.
+                        Technika walki w pozycji leżącej, parter.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie trzymania bocznego.</li>
+                    </ul>
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <!-- SZABLON DLA WSZYSTKICH POZOSTAŁYCH PASÓW -->
+
+        <div id="purple-belt-b-page" class="page-content">
+            <div class="belt-header bg-purple11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-purple-red" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">13 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Fioletowy z
+                    paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo początkowe
+                </p>
+            </div>
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uginanie i prostowanie ramion (p.w. podpór przodem lub na kolanach) – 12 razy.</li>
+                        <li>Unoszenie tułowia (p.w. leżenie tyłem, ręce za głową lub proste wzdłuż tułowia) – 15 razy.
+                        </li>
+                        <li>Przenoszenie nóg za głowę (p.w. leżenie tyłem, ręce proste wzdłuż tułowia) – 15 razy.</li>
+                        <li>Jednoczesne unoszenie tułowia i nóg (p.w. leżenie przodem, ręce proste wzdłuż tułowia) – 15
+                            razy.
+                        </li>
+                        <li>Unoszenie bioder (p.w. leżenie tyłem, nogi ugięte, ręce proste wzdłuż tułowia) – 15 razy.
+                        </li>
+                        <li>Przejście do planku (deski) w podporze na prostych rękach (p.w. stojąc) – 15 razy.</li>
+                        <li>Kompleks burpee, wariant ułatwiony – 15 razy.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Przewrót w przód przez bark (p.w. podpór kuczny).</li>
+                        <li>Samoasekuracja przy przetoczeniu w tył (p.w. siad, nogi w przód).</li>
+                        <li>Samoasekuracja przy przetoczeniu w bok (p.w. siad, nogi w przód).</li>
+                        <li>Samoasekuracja przy padzie w przód (p.w. postawa na kolanach).</li>
+                        <li>Fiksacja pozycji „stanie na łopatkach” z ugiętymi nogami (10 sek).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń rękami
+                        i nogami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzeń okrężnych rękami (lewa, prawa).</li>
+                        <li>Wykonywanie uderzeń kolanem z boku (lewą, prawą nogą).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Technika obrony przed
+                        uderzeniami rękami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie techniki obrony poprzez zbijanie (blok) do wewnątrz-na zewnątrz.</li>
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów obrony (na podstawie
+                            przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika poruszania się
+                        w postawie walki.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Krokiem (przód-tył).</li>
+                        <li>Krokiem dostawnym (przód-tył, prawo-lewo).</li>
+                        <li>Obrót krokiem w przód o 90 stopni.</li>
+                        <li>Obrót krokiem w tył o 90 stopni.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika walki w pozycji
+                        półstojącej. (Atakujący w postawie, przeciwnik w pozycji na kolanach, na jednym kolanie lub w
+                        parterze).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wyprowadzenie z równowagi szarpnięciem, pchnięciem, obrotem.</li>
+                        <li>Przewrót z przerzutem w tył (sprowadzenie przeciwnika z pozycji siedzącej do leżenia tyłem).
+                        </li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Technika walki w pozycji
+                        leżącej (parter).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie trzymania od strony głowy.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uwalnianie się z uchwytu za jedną rękę (dwie ręce) poprzez szarpnięcie ręki (rąk) w stronę
+                            kciuków.
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="red-belt-page" class="page-content">
+            <div class="belt-header bg-red11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-red" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">12 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Czerwony
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo początkowe
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uginanie i prostowanie ramion (p.w. podpór przodem lub na kolanach) – 14 razy.</li>
+                        <li>Unoszenie tułowia (p.w. leżenie tyłem, ręce za głową lub proste wzdłuż tułowia) – 20 razy.
+                        </li>
+                        <li>Przenoszenie nóg za głowę (p.w. leżenie tyłem, ręce proste wzdłuż tułowia) – 20 razy.</li>
+                        <li>Jednoczesne unoszenie tułowia i nóg (p.w. leżenie przodem, ręce proste wzdłuż tułowia) – 20
+                            razy.
+                        </li>
+                        <li>Unoszenie bioder (p.w. leżenie tyłem, nogi ugięte, ręce proste wzdłuż tułowia) – 20 razy.
+                        </li>
+                        <li>Przejście do planku (deski) w podporze na prostych rękach (p.w. stojąc) – 20 razy.</li>
+                        <li>Kompleks burpee, wariant ułatwiony – 20 razy.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Przewrót w przód (p.w. postawa).</li>
+                        <li>Samoasekuracja przy przetoczeniu w tył (p.w. podpór kuczny).</li>
+                        <li>Samoasekuracja przy przetoczeniu w bok (p.w. podpór kuczny).</li>
+                        <li>Samoasekuracja przy padzie w przód (p.w. postawa na kolanach, ręce za plecami).</li>
+                        <li>Fiksacja pozycji „stanie na łopatkach” (10 sek).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń rękami
+                        i nogami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzeń rękami z dołu (lewa, prawa).</li>
+                        <li>Wykonywanie uderzeń nogami w bok (lewa, prawa noga).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Technika obrony przed
+                        uderzeniami rękami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie obrony unikiem przed uderzeniami rękami.</li>
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów obrony (na podstawie
+                            przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika poruszania się
+                        w postawie walki.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Poruszanie się skokami — „wahadło” (przód-tył).</li>
+                        <li>Poruszanie się krokiem skrzyżnym (przód-tył, prawo-lewo).</li>
+                        <li>Wykonywanie obrotu o 180° krokiem w przód i krokiem w tył.</li>
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów poruszania się (krokiem,
+                            krokiem dostawnym, skrzyżnym, skokami).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika walki w pozycji
+                        półstojącej. (Atakujący w postawie, przeciwnik w pozycji na kolanach, na jednym kolanie lub w
+                        parterze).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Przewrót uchwytem za obie ręce.</li>
+                        <li>Przewrót uchwytem szyi spod ramienia.</li>
+                        <li>Przewrót uchwytem ręki i nogi.</li>
+                        <li>Wyprowadzenie z równowagi szarpnięciem za nogę.</li>
+                        <li>Półobalenie szarpnięciem za szyję.</li>
+                        <li>Półobalenie szarpnięciem za rękę.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Technika walki w pozycji
+                        leżącej (parter).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie trzymania poprzecznego.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uwalnianie się z uchwytu za ręce poprzez zbijanie (blok) w prawo-lewo.</li>
+                        <li>Uwalnianie się z uchwytu za ręce poprzez zbijanie (blok) góra-dół.
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="red-belt-b-page" class="page-content">
+            <div class="belt-header bg-red11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-red-orange" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">11 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Czerwony z
+                    paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo początkowe
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uginanie i prostowanie ramion (p.w. podpór przodem lub na kolanach) – 16 razy.</li>
+                        <li>Unoszenie tułowia (p.w. leżenie tyłem, ręce za głową lub proste wzdłuż tułowia) – 25 razy.
+                        </li>
+                        <li>Przenoszenie nóg za głowę (p.w. leżenie tyłem, ręce proste wzdłuż tułowia) – 25 razy.</li>
+                        <li>Jednoczesne unoszenie tułowia i nóg (p.w. leżenie przodem, ręce proste wzdłuż tułowia) – 25
+                            razy.
+                        </li>
+                        <li>Unoszenie bioder (p.w. leżenie tyłem, nogi ugięte, ręce proste wzdłuż tułowia) – 25 razy.
+                        </li>
+                        <li>Przejście do planku (deski) w podporze na prostych rękach z pozycji stojącej – 25 razy.</li>
+                        <li>Kompleks burpee, wariant standardowy – 25 razy.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przewrót w przód z wyskoku (p.w. postawa).</li>
+                        <li>Przewrót w tył (p.w. podpór kuczny).</li>
+                        <li>Samoasekuracja przy padzie w tył (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie w bok na bok (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie w przód (p.w. postawa).</li>
+                        <li>Fiksacja pozycji „most zapaśniczy” bez odrywania głowy od maty (10 sek) (p.w. leżenie
+                            tyłem).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń rękami
+                        i nogami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzenia nogą w bok (lewa, prawa noga).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Technika obrony przed
+                        uderzeniami rękami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie obrony rotacyjnej (nurkowanie) przed uderzeniami rękami.</li>
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów obrony (na podstawie
+                            przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika poruszania się
+                        w postawie walki.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów poruszania się (krokiem,
+                            dostawnym, skrzyżnym, skokami).</li>
+                        <li>Wykonywanie obrotu krokiem (przód-tył) o 360°.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika walki w pozycji
+                        półstojącej. (Atakujący w postawie, przeciwnik w pozycji na kolanach, na jednym kolanie lub w
+                        parterze).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Półrzut przez podcięcie tylne.</li>
+                        <li>Półrzut przez podcięcie przednie.</li>
+                        <li>Półrzut przez zahaczenie.</li>
+                        <li>Półobalenie z wyprowadzeniem z równowagi.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Technika walki w pozycji
+                        leżącej (parter).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie trzymania dosiadu (z góry między nogami).</li>
+                        <li>Wykonywanie 2 kombinacji składających się z różnych rodzajów trzymań.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uwalnianie się z uchwytów obiema rękami za nadgarstki: szarpnięciem rąk w stronę kciuków.
+                        </li>
+                        <li>Uwalnianie się z uchwytów za barki poprzez podbicie rąk w górę.
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="orange-belt-page" class="page-content">
+            <div class="belt-header bg-orange11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-orange" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">10 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Pomarańczowy
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo podstawowe
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uginanie i prostowanie ramion (p.w. podpór przodem lub na kolanach) – 16 razy.</li>
+                        <li>Unoszenie tułowia (p.w. leżenie tyłem, ręce za głową lub proste wzdłuż tułowia) – 25 razy.
+                        </li>
+                        <li>Przenoszenie nóg za głowę (p.w. leżenie tyłem, ręce proste wzdłuż tułowia) – 25 razy.</li>
+                        <li>Jednoczesne unoszenie tułowia i nóg (p.w. leżenie przodem, ręce proste wzdłuż tułowia) – 25
+                            razy.
+                        </li>
+                        <li>Unoszenie bioder (p.w. leżenie tyłem, nogi ugięte, ręce proste wzdłuż tułowia) – 25 razy.
+                        </li>
+                        <li>Przejście do planku (deski) w podporze na prostych rękach z pozycji stojącej – 25 razy.</li>
+                        <li>Kompleks burpee, wariant standardowy – 25 razy.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przewrót w przód z wyskoku (p.w. postawa).</li>
+                        <li>Przewrót w tył (p.w. podpór kuczny).</li>
+                        <li>Samoasekuracja przy padzie w tył (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie w bok na bok (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie w przód (p.w. postawa).</li>
+                        <li>Fiksacja pozycji „most zapaśniczy” bez odrywania głowy od maty (10 sek) (p.w. leżenie
+                            tyłem).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń rękami
+                        i nogami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzenia nogą w bok (lewa, prawa noga).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Technika obrony przed
+                        uderzeniami rękami w postawie frontalnej w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie obrony rotacyjnej (nurkowanie) przed uderzeniami rękami.</li>
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów obrony (na podstawie
+                            przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika poruszania się
+                        w postawie walki.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów poruszania się (krokiem,
+                            dostawnym, skrzyżnym, skokami).</li>
+                        <li>Wykonywanie obrotu krokiem (przód-tył) o 360°.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika walki w pozycji
+                        półstojącej. (Atakujący w postawie, przeciwnik w pozycji na kolanach, na jednym kolanie lub w
+                        parterze).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Półrzut przez podcięcie tylne.</li>
+                        <li>Półrzut przez podcięcie przednie.</li>
+                        <li>Półrzut przez zahaczenie.</li>
+                        <li>Półobalenie z wyprowadzeniem z równowagi.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Technika walki w pozycji
+                        leżącej (parter).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie trzymania dosiadu (z góry między nogami).</li>
+                        <li>Wykonywanie 2 kombinacji składających się z różnych rodzajów trzymań.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Uwalnianie się z uchwytów obiema rękami za nadgarstki: szarpnięciem rąk w stronę kciuków.
+                        </li>
+                        <li>Uwalnianie się z uchwytów za barki poprzez podbicie rąk w górę.
+                        </li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="orange-belt-b-page" class="page-content">
+            <div class="belt-header bg-orange11"
+                style="padding: 60px 20px; text-align: center; color: white;  width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-orange-blue" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">9 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Pomarańczowy
+                    z
+                    niebieskim
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo podstawowe
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Podciąganie na drążku — 4 razy.</li>
+                        <li>Uginanie i prostowanie ramion w podporze przodem — 20 razy.</li>
+                        <li>Unoszenie tułowia z leżenia tyłem, ręce za głową — 35 razy.</li>
+                        <li>Unoszenie nóg z leżenia tyłem, ręce za głową lub proste wzdłuż tułowia — 35 razy.</li>
+                        <li>Unoszenie tułowia i nóg w leżeniu przodem, ręce proste wzdłuż tułowia, dłonie do podłogi —
+                            35 razy.</li>
+                        <li>Ćwiczenie „Plank” (deska) w podporze na łokciach — 60 s.</li>
+                        <li>Kompleks burpee, wariant standardowy z pompką — 30 razy.</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przerzut bokiem (gwiazda) z postawy przodem do kierunku ruchu.</li>
+                        <li>Przewrót w przód przez partnera będącego w parterze (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie w tył przez partnera będącego w parterze (p.w. postawa).</li>
+                        <li>Samoasekuracja po przewrocie w przód przez partnera będącego w parterze (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie w przód z wyskoku przez partnera leżącego przodem.</li>
+                        <li>Stanie na rękach przy ścianie lub z pomocą partnera (10 sek).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika uderzeń rękami i
+                        nogami w postawie walki w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzenia okrężnego ręką (lewa, prawa).</li>
+                        <li>Wykonywanie uderzenia okrężnego ręką z obrotu (backfist) (lewa, prawa).</li>
+                        <li>Wykonywanie uderzenia okrężnego nogą (lewa, prawa).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Technika obrony przed
+                        uderzeniami rękami i nogami w postawie walki w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Obrona przed uderzeniami okrężnymi rękami na głowę: zejścia, uniki, zasłony, zbijania
+                            (bloki) i nurkowania.</li>
+                        <li>Obrona przed uderzeniami okrężnymi rękami na korpus: zejścia, zasłony, zbijania (bloki).
+                        </li>
+                        <li>Obrona przed uderzeniami okrężnymi nogami na głowę: zasłony, zbijania (bloki), zejścia.</li>
+                        <li>Obrona przed uderzeniami okrężnymi nogami na korpus: zasłony, zbijania (bloki), odejście w
+                            tył.
+                        </li>
+                        <li>Obrona przed uderzeniami okrężnymi na nogi (low-kick): zasłony, zbijania (bloki), odejście w
+                            tył.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika pracy w parach
+                        (uderzenia rękami, nogami i obrona przed nimi).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów uderzeń rękami, nogami oraz
+                            obrony przed nimi (na podstawie przerobionego materiału).</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika wykonywania
+                        rzutów.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Obalenie szarpnięciem za rękę.</li>
+                        <li>Obalenie szarpnięciem za głowę.</li>
+                        <li>Obalenie wejściem w obie nogi z przodu.</li>
+                        <li>Obalenie wejściem w obie nogi od tyłu.</li>
+                    </ul>
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Technika walki w pozycji
+                        leżącej, parter.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Dźwignia prosta na staw łokciowy (balacha) z wychwyceniem ręki między nogi z przewrotem
+                            (p.w. parter).</li>
+                        <li>Dźwignia prosta na staw łokciowy z wychwyceniem ręki między nogi z narzutem-przewrotem (p.w.
+                            parter).</li>
+                        <li>Dźwignia prosta na staw łokciowy z wychwyceniem ręki między nogi (p.w. przeciwnik leży
+                            tyłem).</li>
+                    </ul>
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Zadanie 1. Atak: uderzenie okrężne ręką (na głowę, na korpus). Obrona i kontratak: na
+                            podstawie przerobionego materiału.</li>
+                        <li>Zadanie 2. Atak: uderzenie okrężne nogą (na głowę, na korpus, na nogi). Obrona i kontratak:
+                            na podstawie przerobionego materiału.</li>
+                        <li>Zadanie 3. Atak: uchwyt za ubranie jedną ręką, dwiema rękami. Obrona i kontratak: na
+                            podstawie przerobionego materiału.</li>
+                    </ul>
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="blue-belt-page" class="page-content">
+            <div class="belt-header bg-blue11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-blue" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">8 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Niebieski
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo podstawowe
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Podciąganie na drążku — 6 razy.</li>
+                        <li>Uginanie i prostowanie ramion w podporze przodem — 22 razy.</li>
+                        <li>Unoszenie tułowia z leżenia tyłem, ręce za głową — 40 razy.</li>
+                        <li>Unoszenie nóg z leżenia tyłem za głowę, ręce proste wzdłuż tułowia — 40 razy.</li>
+                        <li>Unoszenie tułowia i nóg w leżeniu przodem, ręce proste wzdłuż tułowia, dłonie do podłogi —
+                            40 razy.</li>
+                        <li>Ćwiczenie „Plank” (deska) w podporze na łokciach — 75 s.</li>
+                        <li>Kompleks burpee, wariant standardowy z pompką — 35 razy.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przerzut bokiem (gwiazda) z postawy bokiem do kierunku ruchu.</li>
+                        <li>Przewrót w przód przez dwóch partnerów będących w parterze (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie w tył z obrotem o 180° (p.w. postawa).</li>
+                        <li>Samoasekuracja po przewrocie przez bark z wyskokiem (p.w. postawa).</li>
+                        <li>Stanie na głowie z ugiętymi nogami (10 sek).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń rękami
+                        i nogami w postawie walki w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzenia ręką z dołu (lewa, prawa).</li>
+                        <li>Wykonywanie uderzenia ręką z góry (lewa, prawa).</li>
+                        <li>Wykonywanie uderzenia nogą w bok (lewa, prawa).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Technika obrony przed
+                        uderzeniami rękami i nogami w postawie walki w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Obrona przed uderzeniami rękami z dołu na głowę: unikami, zasłonami i zbijaniem (blokami).
+                        </li>
+                        <li>Obrona przed uderzeniami rękami z dołu na korpus: zasłonami, zbijaniem (blokami).</li>
+                        <li>Obrona przed uderzeniami nogami w bok na korpus: odejściem, zbijaniem, krokami z obrotem.
+                        </li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika pracy w parach
+                        (uderzenia rękami, nogami i obrona przed nimi).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów uderzeń rękami, nogami oraz
+                            obrony przed nimi (na podstawie przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika wykonywania
+                        rzutów.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzut przez podcięcie przednie.</li>
+                        <li>Przewrót nurkowy za rękę i nogę.</li>
+                        <li>Obalenie z przewrotem przy podejściu od tyłu.</li>
+                        <li>Rzut przez plecy z kolan.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Technika walki w pozycji
+                        leżącej, parter.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wyłamanie barku (klucz na bark) przez uniesienie łokcia (z pozycji trzymania bocznego).</li>
+                        <li>Wyłamanie barku (klucz na bark) przez uniesienie łokcia (z pozycji trzymania poprzecznego).
+                        </li>
+                        <li>Ucisk na ścięgno Achillesa (z pozycji gdy przeciwnik leży tyłem).</li>
+                        <li>Ucisk na ścięgno Achillesa (z pozycji gdy przeciwnik leży przodem).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Zadanie 1. Atak: uderzenie ręką z dołu na głowę (na głowę, na korpus). Obrona i kontratak:
+                            na podstawie przerobionego materiału.</li>
+                        <li>Zadanie 2. Atak: uderzenie ręką z góry na głowę (na głowę). Obrona i kontratak: na podstawie
+                            przerobionego materiału.</li>
+                        <li>Zadanie 3. Atak: uderzenie nogą w bok. Obrona i kontratak: na podstawie przerobionego
+                            materiału.</li>
+                        <li>Zadanie 4. Atak: obchwyt tułowia przy podejściu z przodu bez rąk, z rękami. Obrona i
+                            kontratak: na podstawie przerobionego materiału.</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="blue-belt-b-page" class="page-content">
+            <div class="belt-header bg-blue11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-blue-yellow" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">7 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Niebieski z
+                    paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo podstawowe
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Podciąganie na drążku — 6 razy.</li>
+                        <li>Uginanie i prostowanie ramion w podporze przodem — 24 razy.</li>
+                        <li>Unoszenie tułowia z leżenia tyłem, ręce za głową — 45 razy.</li>
+                        <li>Unoszenie nóg z leżenia tyłem za głowę, ręce proste wzdłuż tułowia — 45 razy.</li>
+                        <li>Unoszenie tułowia i nóg w leżeniu przodem, ręce proste wzdłuż tułowia, dłonie do podłogi —
+                            45 razy.</li>
+                        <li>Ćwiczenie „Plank” (deska) w podporze na łokciach — 90 s.</li>
+                        <li>Kompleks burpee, wariant standardowy z pompką — 40 razy.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przerzut bokiem (rondat) z obrotem o 90° ze złączeniem nóg w połowie ruchu.</li>
+                        <li>Samoasekuracja przy padzie w tył z obrotem o 180° w wyskoku (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie na plecy wyskokiem (p.w. postawa).</li>
+                        <li>Samoasekuracja przy padzie na bok z obrotem o 270° (p.w. podpór przodem).</li>
+                        <li>Stanie na głowie (10 sek).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń rękami
+                        i nogami w postawie walki w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzenia okrężnego nogą (lewa, prawa).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z dwóch i więcej uderzeń rękami i nogami (na
+                            podstawie przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Technika obrony przed
+                        uderzeniami rękami i nogami w postawie walki w miejscu i w ruchu.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z jednego i więcej rodzajów obrony przed
+                            uderzeniami rękami i nogami (na podstawie przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika pracy w parach
+                        (uderzenia rękami, nogami i obrona przed nimi) (na podstawie przerobionego materiału).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z różnych rodzajów uderzeń rękami i nogami.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika wykonywania
+                        rzutów.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzut przez biodro.</li>
+                        <li>Zahaczenie z zewnątrz.</li>
+                        <li>Zahaczenie od wewnątrz.</li>
+                        <li>Podcięcie.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Technika walki w pozycji
+                        leżącej, parter.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Przeprost stawu kolanowego (z pozycji gdy przeciwnik leży tyłem).</li>
+                        <li>Przeprost stawu kolanowego (z pozycji gdy przeciwnik leży przodem).</li>
+                        <li>Wykręcanie stawu biodrowego (z pozycji gdy przeciwnik leży tyłem).</li>
+                        <li>Wykręcanie stawu biodrowego (z pozycji gdy przeciwnik leży przodem).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Zadanie 1. Atak: uderzenia rękami (proste, okrężne, z dołu, z góry), 2 rodzaje ataków.
+                            Obrona i kontratak: na podstawie przerobionego materiału.</li>
+                        <li>Zadanie 2. Atak: uderzenia nogami (w przód, okrężne, w bok), 2 rodzaje ataków. Obrona i
+                            kontratak: na podstawie przerobionego materiału.</li>
+                        <li>Zadanie 3. Atak: obchwyt tułowia przy podejściu od tyłu bez rąk, z rękami. Obrona i
+                            kontratak: na podstawie przerobionego materiału.</li>
+                        <li>Zadanie 4. Atak: uchwyt za ręce, za ubranie, 2 rodzaje ataków. Obrona i kontratak: na
+                            podstawie przerobionego materiału.</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="yellow-belt-page" class="page-content">
+            <div class="belt-header bg-yellow11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-yellow" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">6 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Żółty
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo specjalistyczne
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Podciąganie na drążku — 8 razy.</li>
+                        <li>Wykonywanie kompleksu ćwiczeń (10+10+10+10) — 3 razy.</li>
+                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są po 10 razy bez przerw, z wysokim poziomem
+                            technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Z pozycji stojącej przejście do „mostka gimnastycznego” z oderwaniem głowy od maty.</li>
+                        <li>Wykonywanie 2 kompleksów ćwiczeń gimnastycznych (1 + 1) według wyboru komisji.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Znajomość poprzednich
+                        poziomów.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika uderzeń w postawie
+                        walki (w miejscu, w ruchu).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzeń kantem dłoni z boku, odwrotne z boku, z góry, w przód (lewa, prawa).
+                        </li>
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń rękami i nogami.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Wykonywanie dźwigni w
+                        stójce.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Dźwignia na rękę na zewnątrz (RRN).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika obrony przed
+                        uderzeniami rękami.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Atak: uderzenia rękami — proste, z dołu, odwrotne z boku, z góry. Obrona: na podstawie
+                            przerobionego materiału. Kontratak: na podstawie przerobionego materiału (RRN).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika wykonywania
+                        rzutów.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzut przez głowę (poświęcenia).</li>
+                        <li>Rzut przez podstawienie nogi.</li>
+                        <li>Rzut przez podbicie (podchwyt).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Wykonywanie
+                        specjalistycznych kompleksów technicznych.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzuty na czas — 10 rzutów w 40 sek.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika w stójce.</li>
+                    </ul>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">5</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">1</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>brak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="yellow-belt-b-page" class="page-content">
+            <div class="belt-header bg-yellow11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-yellow-green" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">5 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Żółty z
+                    paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    mistrzostwo specjalistyczne
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Podciąganie na drążku — 9 razy.</li>
+                        <li>Wykonywanie kompleksu ćwiczeń (10+10+10+10) — 3 razy.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są po 10 razy bez przerw, z wysokim poziomem
+                            technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przerzut w przód z podparciem na rękach i głowie.</li>
+                        <li>Wykonywanie 3 kompleksów ćwiczeń gimnastycznych (1 + 1) według wyboru komisji.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Znajomość poprzednich
+                        poziomów.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika uderzeń w postawie
+                        walki (w miejscu, w ruchu).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzeń łokciami z boku, z dołu, z góry, w tył (lewa, prawa).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń rękami i nogami.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Wykonywanie dźwigni w
+                        stójce.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Dźwignia na rękę do wewnątrz (RRW).</li>
+                        <li>Dźwignia na rękę przez przedramię (RRP).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika obrony przed
+                        uderzeniami rękami.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Atak: uderzenia rękami — proste, odwrotne z boku, z góry. Obrona: na podstawie przerobionego
+                            materiału. Kontratak: na podstawie przerobionego materiału (RRP i RRW).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Technika wykonywania
+                        rzutów.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Przez barki (młynek).</li>
+                        <li>Rzut z wygięciem (suples).</li>
+                        <li>Podwójne podbicie (nożyce).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">Wykonywanie
+                        specjalistycznych kompleksów technicznych.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzuty na czas — 10 rzutów w 35 sek.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika w stójce.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">2</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>brak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="green-belt-page" class="page-content">
+            <div class="belt-header bg-green11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-green" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">4 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Zielony
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    mistrzostwo specjalistyczne
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Podciąganie na drążku — 9 razy.</li>
+                        <li>Wykonywanie kompleksu ćwiczeń (10+10+10+10) — 4 razy.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są po 10 razy bez przerw, z wysokim poziomem
+                            technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przerzut w przód z podparciem na rękach.</li>
+                        <li>Wykonywanie 4 kompleksów ćwiczeń gimnastycznych (1 + 1) według wyboru komisji.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń w
+                        postawie walki (w miejscu, w ruchu).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie uderzeń kolanami w przód, z boku, z dołu (lewa, prawa noga).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń rękami i nogami.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Wykonywanie dźwigni w
+                        stójce.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykręcenie ręki z góry (WRS).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika obrony przed
+                        uderzeniami rękami.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Atak: uderzenia rękami — proste, odwrotne z boku, z góry. Obrona: na podstawie przerobionego
+                            materiału. Kontratak: na podstawie przerobionego materiału (WRS).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika obrony i ataku
+                        w pozycji półstojącej (atakujący na kolanie/kolanach — przeciwnik stoi).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Obalenie obrotem z dołu przez rękę.</li>
+                        <li>Obalenie skłonem z dołu przez uchwyt za nogi.</li>
+                        <li>Obalenie wygięciem z dołu z oparciem stopy o brzuch.</li>
+                        <li>Obalenie rotacyjne z dołu z przejściem do dźwigni na łokieć.</li>
+                        <li>Obalenie rzutem przez barki z dołu.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Wykonywanie
+                        specjalistycznych kompleksów technicznych.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzuty na czas — 15 rzutów w 45 sek.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika w stójce.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">3</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>brak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+        <div id="green-belt-b-page" class="page-content">
+            <div class="belt-header bg-green11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-green-brown" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">3 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Zielony z
+                    paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Mistrzostwo specjalistyczne
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Podciąganie na drążku — 10 razy.</li>
+                        <li>Wykonywanie kompleksu ćwiczeń (10+10+10+10) — 5 razy.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są po 10 razy bez przerw, z wysokim poziomem
+                            technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Dynamiczny przewrót w przód z podparciem na rękach.</li>
+                        <li>Wykonywanie 5 kompleksów ćwiczeń gimnastycznych (1 + 1) według wyboru komisji.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń w
+                        postawie walki (w miejscu, w ruchu).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń kantem dłoni, łokciami,
+                            kolanami.
+                        </li>
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń rękami i nogami.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Wykonywanie dźwigni w
+                        stójce.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wygięcie ręki za plecy (ZRP).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika obrony przed
+                        uderzeniami rękami.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Atak: uderzenia rękami — proste, z boku, odwrotne z boku, z dołu, z góry. Obrona: na
+                            podstawie przerobionego materiału. Kontratak: na podstawie przerobionego materiału (ZRP).
+                        </li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika obrony i ataku
+                        w pozycji leżącej (atakujący na plecach, na boku).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Obrona przed uderzeniami rękami (napastnik stoi — broniący leży na plecach nogami do
+                            napastnika).
+                        </li>
+                        <li>Obrona przed uderzeniami nogami (napastnik stoi — broniący leży na boku do napastnika).</li>
+                        <li>Obalenie skłonem w leżeniu przez uchwyt za nogi (napastnik stoi — broniący leży na brzuchu
+                            głową do nóg).</li>
+                        <li>Obalenie rotacyjne, węzłem nogi/nóg (napastnik stoi — broniący leży na brzuchu nogami do
+                            nóg).</li>
+                        <li>Obalenie w leżeniu przez uchwyt za pięty (napastnik stoi — broniący leży na plecach nogami
+                            do napastnika).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Wykonywanie
+                        specjalistycznych kompleksów technicznych.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzuty na czas — 20 rzutów w 50 sek.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika w stójce.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>brak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+        <div id="green-belt-b-page" class="page-content">
+            <div class="belt-header bg-green11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-green-brown" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">3 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Zielony z
+                    paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Przygotowanie do wyższego mistrzostwa
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">I. Ogólna sprawność
+                        fizyczna</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonanie kompleksu ćwiczeń.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Podciąganie na drążku</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 5</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są maksymalną liczbę razy bez przerw, z wysokim
+                            poziomem technicznym, bez odpoczynku między ćwiczeniami (kompleks 10+10+10+10 wykonywany 5
+                            razy).</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">II. Elementy gimnastyki,
+                        akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń gimnastycznych i
+                        akrobatycznych.
+                    </h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Przerzut w przód z podparciem na rękach (tempo).</li>
+                        <li>Wykonywanie 5 kompleksów ćwiczeń gimnastycznych (1 + 1) według wyboru komisji.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">III. Specjalistyczne
+                        przygotowanie techniczne.</h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">1. Znajomość poprzednich
+                        poziomów.</h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">2. Technika uderzeń w
+                        postawie walki (w miejscu, w ruchu).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń kantem dłoni, łokciami,
+                            kolanami.</li>
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń rękami i nogami.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">3. Wykonywanie dźwigni w
+                        stójce.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wygięcie ręki za plecy (ZRP).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">4. Technika obrony przed
+                        uderzeniami rękami.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Atak: uderzenia rękami — proste, z boku, odwrotne z boku, z dołu, z góry. Obrona: na
+                            podstawie przerobionego materiału. Kontratak: na podstawie przerobionego materiału (ZRP).
+                        </li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">5. Technika obrony i ataku
+                        w pozycji leżącej (atakujący na plecach, na boku).</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Obrona przed uderzeniami rękami (napastnik stoi — broniący leży na plecach nogami do
+                            napastnika).</li>
+                        <li>Obrona przed uderzeniami nogami (napastnik stoi — broniący leży na boku do napastnika).</li>
+                        <li>Obalenie skłonem w leżeniu przez uchwyt za nogi (napastnik stoi — broniący leży na brzuchu
+                            głową do nóg).</li>
+                        <li>Obalenie rotacyjne, węzłem nóg (napastnik stoi — broniący leży na brzuchu nogami do nóg).
+                        </li>
+                        <li>Obalenie w leżeniu przez uchwyt za pięty (napastnik stoi — broniący leży na plecach nogami
+                            do napastnika).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">6. Wykonywanie
+                        specjalistycznych kompleksów technicznych.</h5>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Rzuty na czas — 20 rzutów w 50 sek.</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">IV. Praktyczna
+                        realizacja przerobionego materiału.</h4>
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika w stójce.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>brak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sparring treningowy (6 walk po 2 minuty).</li>
+                    </ul>
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="brown-belt-b-page" class="page-content">
+            <div class="belt-header bg-brown11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-brown-black" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">1 kyu</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Brązowy z
+                    paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Przygotowanie do wyższego mistrzostwa
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Ogólna sprawność fizyczna
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonanie kompleksu ćwiczeń.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Podciąganie na drążku</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>55</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 5</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są maksymalną liczbę razy bez przerw, z wysokim
+                            poziomem technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Elementy gimnastyki, akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń
+                        gimnastycznych i akrobatycznych.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poprzednich poziomów przygotowania.</li>
+                        <li>Wykonywanie 3 kompleksów ćwiczeń gimnastycznych (1 + 1 + 1) według wyboru komisji.</li>
+                        <li>Wykonywanie 2 kompleksów ćwiczeń gimnastycznych z przyrządem (nóż, pałka).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Specjalistyczne przygotowanie techniczne.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Znajomość poprzednich poziomów.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Technika uderzeń w postawie walki (w miejscu, w ruchu).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Z wykorzystaniem broni (nóż).</li>
+                        <li>Wykonywanie 4 kombinacji składających się z trzech i więcej uderzeń (rękami, nogami).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Technika obrony przed zagrożeniem lub atakiem bronią.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Ataki: uderzenia nożem z góry, z boku, odwrotne z boku, w przód. Obrona i kontratak — na
+                            podstawie przerobionego materiału.</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Wykonywanie specjalistycznych kompleksów technicznych.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa specjalistycznego kompleksu technicznego</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Przetoczenie-rzut</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Rzuty przez przetoczenie (na plecach)</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Rzuty na czas (55 s)</td>
+                                <td>22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Praktyczna realizacja przerobionego materiału.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">2</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Broń</td>
+                                <td>pałka, nóż</td>
+                            </tr>
+                            <tr>
+                                <td>Pozycja podczas ataku</td>
+                                <td>postawa, pozycja na kolanach, pozycja leżąca</td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>tak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sparring treningowy (8 walk po 2 minuty)</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="black-belt-page" class="page-content">
+            <div class="belt-header bg-black11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-black" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">1 dan</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">Czarny
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Wyższe mistrzostwo
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Ogólna sprawność fizyczna
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonanie kompleksu ćwiczeń.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Podciąganie na drążku</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 5</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>90</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są maksymalną liczbę razy bez przerw, z wysokim
+                            poziomem technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Elementy gimnastyki, akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń
+                        gimnastycznych i akrobatycznych.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poziomu podstawowego, specjalistycznego oraz przygotowania do wyższego
+                            mistrzostwa.</li>
+                        <li>Wykonywanie 2 kompleksów ćwiczeń gimnastycznych (1 + 1 + 1 + 1) według wyboru komisji.</li>
+                        <li>Wykonywanie 2 kompleksów ćwiczeń gimnastycznych (1 + 1 i więcej) z przyrządem (nóż, pałka,
+                            pistolet).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Specjalistyczne przygotowanie techniczne.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Znajomość poprzednich poziomów.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Technika uderzeń w postawie walki (w miejscu, w ruchu).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Z wykorzystaniem broni (pistolet).</li>
+                        <li>Wykonywanie 5 kombinacji składających się z trzech i więcej uderzeń (rękami, nogami, pałką,
+                            nożem, pistoletem).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Technika obrony przed zagrożeniem lub atakiem bronią.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Ataki: zagrożenie pistoletem przy podejściu z przodu, z tyłu oraz przy próbie wyciągnięcia
+                            broni. (Obrona: na podstawie przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Wykonywanie specjalistycznych kompleksów technicznych.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa specjalistycznego kompleksu technicznego</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Przetoczenie-rzut</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Rzuty przez przetoczenie</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Rzuty na czas (60 s)</td>
+                                <td>25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Praktyczna realizacja przerobionego materiału.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">3</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Broń</td>
+                                <td>pałka, nóż, pistolet</td>
+                            </tr>
+                            <tr>
+                                <td>Pozycja podczas ataku</td>
+                                <td>postawa, pozycja na kolanach, pozycja leżąca</td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>tak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sparring treningowy (10 walk po 2 minuty)</li>
+                    </ul>
+
+                </div>
+
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="black-belt-b-page" class="page-content">
+            <div class="belt-header bg-black11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-black-1" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">2 dan</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">
+                    Czarny z paskiem
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Wyższe mistrzostwo
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Ogólna sprawność fizyczna
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonanie kompleksu ćwiczeń.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Podciąganie na drążku</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>65</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 5</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>95</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są maksymalną liczbę razy bez przerw, z wysokim
+                            poziomem technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Elementy gimnastyki, akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń
+                        gimnastycznych i akrobatycznych.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poziomu podstawowego, specjalistycznego oraz przygotowania do wyższego
+                            mistrzostwa.</li>
+                        <li>Wykonywanie 3 kompleksów ćwiczeń gimnastycznych (1 + 1 + 1 + 1) według wyboru komisji.</li>
+                        <li>Wykonywanie 3 kompleksów ćwiczeń gimnastycznych (1 + 1 i więcej) z przyrządem (nóż, pałka,
+                            pistolet, automat).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Specjalistyczne przygotowanie techniczne.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Znajomość poprzednich poziomów.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Technika uderzeń w postawie walki (w miejscu, w ruchu).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Z wykorzystaniem broni (karabin/automat).</li>
+                        <li>Wykonywanie 5 kombinacji składających się z trzech i więcej uderzeń (rękami, nogami, pałką,
+                            nożem, pistoletem, automatem).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Technika obrony przed zagrożeniem lub atakiem bronią.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Ataki: zagrożenie automatem przy podejściu z przodu, z tyłu. (Obrona: na podstawie
+                            przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Wykonywanie specjalistycznych kompleksów technicznych.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa specjalistycznego kompleksu technicznego</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Przetoczenie-rzut</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Rzuty przez przetoczenie</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Rzuty na czas (70 s)</td>
+                                <td>28</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Praktyczna realizacja przerobionego materiału.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">4</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Broń</td>
+                                <td>pałka, nóż, pistolet</td>
+                            </tr>
+                            <tr>
+                                <td>Pozycja podczas ataku</td>
+                                <td>postawa, pozycja na kolanach, pozycja leżąca</td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>tak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sparring treningowy (12 walk po 2 minuty)</li>
+                    </ul>
+
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="black-belt-bb-page" class="page-content">
+            <div class="belt-header bg-black11"
+                style="padding: 60px 20px; text-align: center; color: white; width: 100vw; margin-left: calc(-50vw + 50%);">
+                <div class="belt-rect bg-black-2" style="margin: 0 auto 20px; width: 130px; height: 50px;"></div>
+                <div style="font-size: 14px; opacity: 0.8;">3 dan</div>
+                <h1 class="oswald-font" style="font-size: 48px; text-transform: uppercase; margin: 0px 0;">
+                    Czarny z dwiema paskami
+                </h1>
+                <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Wyższe mistrzostwo
+                </p>
+            </div>
+
+            <div class="container" style="padding-top: 30px;">
+                <h2 class="oswald-font" style="color: white; margin-bottom: 11px;">Wymagania</h2>
+
+                <div class="requirements-box"
+                    style="background: #1a1a1a; padding: 30px; border-left: 4px solid #ff4d4d;">
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        I. Ogólna sprawność fizyczna
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonanie kompleksu ćwiczeń.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ćwiczenie 1</td>
+                                <td>Podciąganie na drążku</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 2</td>
+                                <td>Uginanie i prostowanie ramion w podporze przodem</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 3</td>
+                                <td>Przejście z podporu kucznego do podporu przodem</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 4</td>
+                                <td>Unoszenie tułowia, ręce za głową</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Ćwiczenie 5</td>
+                                <td>Wyskok w górę z przysiadu, ręce za głową</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><i>Warunki: wszystkie ćwiczenia wykonywane są maksymalną liczbę razy bez przerw, z wysokim
+                            poziomem technicznym, bez odpoczynku między ćwiczeniami.</i></p>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        II. Elementy gimnastyki, akrobatyki. Asekuracja i samoasekuracja przy wykonywaniu ćwiczeń
+                        gimnastycznych i akrobatycznych.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Znajomość poziomu podstawowego, specjalistycznego oraz przygotowania do wyższego
+                            mistrzostwa.</li>
+                        <li>Wykonywanie 4 kompleksów ćwiczeń gimnastycznych (1 + 1 + 1 + 1) według wyboru komisji.</li>
+                        <li>Wykonywanie 4 kompleksów ćwiczeń gimnastycznych (1 + 1 i więcej) z przyrządem (nóż, pałka,
+                            pistolet, automat).</li>
+                    </ul>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        III. Specjalistyczne przygotowanie techniczne.
+                    </h4>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        1. Znajomość poprzednich poziomów.
+                    </h5>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        2. Technika uderzeń w postawie walki (w miejscu, w ruchu).
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Wykonywanie 6 kombinacji składających się z pięciu i więcej uderzeń (rękami, nogami, pałką,
+                            nożem, pistoletem, automatem).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        3. Technika obrony przed zagrożeniem dowolną bronią.
+                    </h5>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Ataki: zagrożenie bronią przy podejściu z przodu, z tyłu. (Obrona: na podstawie
+                            przerobionego materiału).</li>
+                    </ul>
+
+                    <h5 style="color: #ccc; text-transform: uppercase; margin-bottom: 15px;">
+                        4. Wykonywanie specjalistycznych kompleksów technicznych.
+                    </h5>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Nazwa specjalistycznego kompleksu technicznego</th>
+                                <th>Liczba powtórzeń</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Przewrót-rzut</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Rzuty przez przetoczenie</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Rzuty na czas (80 s)</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="color: #ff4d4d; text-transform: uppercase; margin-bottom: 15px;">
+                        IV. Praktyczna realizacja przerobionego materiału.
+                    </h4>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sytuacje modelowe — neutralizacja umownego ataku przeciwnika.</li>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Warunki:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba sytuacji modelowych</td>
+                                <td class="center-text">5</td>
+                            </tr>
+                            <tr>
+                                <td>Liczba napastników</td>
+                                <td class="center-text">5</td>
+                            </tr>
+                            <tr>
+                                <td>Działania techniczne</td>
+                                <td>uderzenia (rękami, nogami), chwyty, obchwyty ubrania, rąk, włosów, szyi, tułowia.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Broń</td>
+                                <td>pałka, nóż, pistolet</td>
+                            </tr>
+                            <tr>
+                                <td>Pozycja podczas ataku</td>
+                                <td>postawa, pozycja na kolanach, pozycja leżąca</td>
+                            </tr>
+                            <tr>
+                                <td>Element zaskoczenia</td>
+                                <td>tak</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <ul style="color: #ccc; list-style: disc; padding-left: 20px;">
+                        <li>Sparring treningowy (14 walk po 2 minuty)</li>
+                    </ul>
+
+                </div>
+                <button onclick="showPage('belts')" class="submit-btn oswald-font"
+                    style="margin-top: 30px; width: auto; padding: 10px 30px;">
+                    ← Powrót do listy
+                </button>
+            </div>
+        </div>
+
+
+        <div id="belts-page" class="page-content">
+            <h2 class="section-header-title">System pasów</h2>
+
+            <div class="belts-list">
+                <a href="#" onclick="showPage('purple-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">14 kyu</span>
+                        <div class="belt-rect bg-purple"></div> <span class="belt-name">Fioletowy</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+
+
+                <a href="#" onclick="showPage('purple-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">13 kyu</span>
+                        <div class="belt-rect bg-purple-red"></div> <span class="belt-name">Fioletowy z paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+
+
+                <a href="#" onclick="showPage('red-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">12 kyu</span>
+                        <div class="belt-rect bg-red"></div>
+                        <span class="belt-name">Czerwony</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('red-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">11 kyu</span>
+                        <div class="belt-rect bg-red-orange"></div>
+                        <span class="belt-name">Czerwony z paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('orange-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">10 kyu</span>
+                        <div class="belt-rect bg-orange"></div>
+                        <span class="belt-name">Pomarańczowy</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('orange-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">9 kyu</span>
+                        <div class="belt-rect bg-orange-blue"></div>
+                        <span class="belt-name">Pomarańczowy z paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('blue-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">8 kyu</span>
+                        <div class="belt-rect bg-blue"></div>
+                        <span class="belt-name">Niebieski</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('blue-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">7 kyu</span>
+                        <div class="belt-rect bg-blue-yellow"></div>
+                        <span class="belt-name">Niebieski z paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('yellow-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">6 kyu</span>
+                        <div class="belt-rect bg-yellow"></div>
+                        <span class="belt-name">Żółty</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('yellow-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">5 kyu</span>
+                        <div class="belt-rect bg-yellow-green"></div>
+                        <span class="belt-name">Żółty z paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('green-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">4 kyu</span>
+                        <div class="belt-rect bg-green"></div>
+                        <span class="belt-name">Zielony</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('green-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">3 kyu</span>
+                        <div class="belt-rect bg-green-brown"></div>
+                        <span class="belt-name">Zielony z paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('brown-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">2 kyu</span>
+                        <div class="belt-rect bg-brown"></div>
+                        <span class="belt-name">Brązowy</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('brown-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">1 kyu</span>
+                        <div class="belt-rect bg-brown-black"></div>
+                        <span class="belt-name">Brązowy z paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('black-belt'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">1 dan</span>
+                        <div class="belt-rect bg-black"></div>
+                        <span class="belt-name">Czarny</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('black-belt-b'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">2 dan</span>
+                        <div class="belt-rect bg-black-1"></div>
+                        <span class="belt-name">Czarny z jednym paskiem</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+                <a href="#" onclick="showPage('black-belt-bb'); return false;" class="belt-row">
+                    <div class="belt-info">
+                        <span class="belt-lv">3 dan</span>
+                        <div class="belt-rect bg-black-2"></div>
+                        <span class="belt-name">Czarny z dwoma paskami</span>
+                    </div>
+                    <span class="arrow-icon">›</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center;">
+            <div class="footer-logo-block">
+                <a href="#" onclick="showPage('main'); return false;" class="logo-area oswald-font"
+                    style="justify-content: center;">
+                    <img src="fotoczki/ratibor foto.png" alt="Ratibor Logo" class="logo-img">
+                    <div class="logo-text">SK Ratibor</div>
+                </a>
+            </div>
+            <div style="margin-top: 20px; color: rgba(255, 255, 255, 0.5); font-size: 13px;">
+                Copyright © 2026 SK Ratibor - Veronika Cherkashchenko
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleModal(show) {
+            const modal = document.getElementById('modal-update');
+            modal.style.display = show ? 'flex' : 'none';
+
+            // Blokowanie przewijania tła, gdy okno jest otwarte
+            document.body.style.overflow = show ? 'hidden' : 'auto';
+        }
+        function showPage(pageId) {
+            // Ukrywanie wszystkich stron
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Pokazywanie wybranej strony
+            const activePage = document.getElementById(pageId + '-page') || document.getElementById(pageId);
+            if (activePage) {
+                activePage.classList.add('active');
+            } else {
+                console.warn('showPage: nie znaleziono strony', pageId);
+            }
+
+            // Aktualizacja okruszków (breadcrumbs)
+            const breadcrumb = document.getElementById('breadcrumb');
+
+            if (pageId === 'main') {
+                breadcrumb.innerHTML = 'Strona główna';
+            } else if (pageId === 'about') {
+                breadcrumb.innerHTML = 'Strona główna / O klubie';
+            } else if (pageId === 'belts') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów';
+            } else if (pageId === 'imgg') {
+                breadcrumb.innerHTML = 'Strona główna / Media';
+            } else if (pageId === 'purple-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Fioletowy';
+            } else if (pageId === 'purple-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Fioletowy z paskiem';
+            } else if (pageId === 'red-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Czerwony';
+            } else if (pageId === 'red-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Czerwony z paskiem';
+            } else if (pageId === 'orange-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Pomarańczowy';
+            } else if (pageId === 'orange-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Pomarańczowy z paskiem';
+            } else if (pageId === 'blue-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Niebieski';
+            } else if (pageId === 'blue-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pas_ów / Niebieski z paskiem';
+            } else if (pageId === 'yellow-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Żółty';
+            } else if (pageId === 'yellow-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Żółty z paskiem';
+            } else if (pageId === 'green-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Zielony';
+            } else if (pageId === 'green-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Zielony z paskiem';
+            } else if (pageId === 'brown-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Brązowy';
+            } else if (pageId === 'brown-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Brązowy z paskiem';
+            } else if (pageId === 'black-belt') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Czarny';
+            } else if (pageId === 'black-belt-b') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Czarny z paskiem';
+            } else if (pageId === 'black-belt-bb') {
+                breadcrumb.innerHTML = 'Strona główna / System pasów / Czarny z dwoma paskami';
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        function toggleLangMenu(event) {
+            event.stopPropagation();
+            const menu = document.getElementById('lang-menu');
+            menu.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function () {
+            const menu = document.getElementById('lang-menu');
+            if (menu) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+
+    <div id="modal-update" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="oswald-font">Aktualizuj dane profilu</h2>
+                <span class="close-modal" onclick="toggleModal(false)">Zamknij ×</span>
+            </div>
+
+            <p class="modal-desc">
+                Zaproponuj zmiany w profilu sportowca — nowe zdjęcie, korektę imienia lub inne informacje.
+            </p>
+
+            <form class="update-form" action="https://formsubmit.co/chernika056@gmail.com" method="POST"
+                enctype="multipart/form-data">
+
+                <!-- Ustawienia FormSubmit -->
+                <input type="hidden" name="_subject" value="Prośba o aktualizację profilu: Veronika">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <!-- Po wysłaniu -->
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+
+                <!-- Antyspam -->
+                <input type="text" name="_honey" style="display:none">
+
+                <!-- Zdjęcie -->
+                <div class="form-group">
+                    <label>Nowe zdjęcie (opcjonalnie)</label>
+
+                    <div class="file-input-wrapper">
+                        <button type="button" class="file-btn" onclick="document.getElementById('file-upload').click()">
+                            Wybierz plik
+                        </button>
+
+                        <span class="file-name" id="file-chosen">Nie wybrano pliku</span>
+
+                        <input type="file" id="file-upload" name="attachment" accept="image/*" style="display:none"
+                            onchange="document.getElementById('file-chosen').textContent = this.files[0] ? this.files[0].name : 'Nie wybrano pliku'">
+                    </div>
+                </div>
+
+                <!-- Imię / Nazwisko -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Imię</label>
+                        <input type="text" name="first_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nazwisko</label>
+                        <input type="text" name="last_name" required>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <!-- Komentarz -->
+                <div class="form-group">
+                    <label>Komentarz</label>
+                    <textarea name="message" placeholder="Co należy zaktualizować? Dodatkowe szczegóły..."></textarea>
+                </div>
+
+                <!-- Przycisk -->
+                <button type="submit" class="submit-btn oswald-font">
+                    Wyślij prośbę
+                </button>
+            </form>
+        </div>
+    </div>
