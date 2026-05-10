@@ -1,0 +1,8 @@
+.vscode/
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+tmp_local_backup/
