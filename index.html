@@ -29,6 +29,10 @@
             min-height: 100vh;
         }
 
+        * {
+    box-sizing: border-box; /* Гарантирует, что padding не расширяет блоки */
+}
+
         body>.container {
             flex: 1;
         }
@@ -931,6 +935,7 @@
                 flex-wrap: wrap;
                 gap: 15px;
             }
+
             nav ul {
                 flex-wrap: wrap;
                 gap: 12px;
