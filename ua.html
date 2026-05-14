@@ -31,7 +31,7 @@
 
         * {
             box-sizing: border-box;
-            /* Гарантирует, что padding не расширяет блоки */
+            /* Гарантує що padding не розширює блоки */
         }
 
         body>.container {
@@ -575,7 +575,7 @@
             background-color: #0000006e;
         }
 
-        /* Цвета поясов */
+        /* Колори пасів */
         .bg-purple {
             background-color: #550676;
         }
@@ -645,21 +645,21 @@
         .bg-black-2 {
             background: linear-gradient(to bottom,
                     #101010 35%,
-                    /* Верхний черный блок (до 40%) */
+                    /* Верхній чорний блок (до 40%) */
                     #d6b811 35%,
-                    /* Начало 1-й полосы */
+                    /* Початок 1-ї смужки */
                     #d6b811 45%,
-                    /* Конец 1-й полосы */
+                    /* Кінець 1-ї смужки */
                     #101010 45%,
-                    /* Разделитель между полосами */
+                    /* Роздільник між смужками */
                     #101010 60%,
-                    /* Разделитель между полосами */
+                    /* Роздільник між смужками */
                     #d6b811 60%,
-                    /* Начало 2-й полосы */
+                    /* Початок 2-ї смужки */
                     #d6b811 70%,
-                    /* Конец 2-й полосы */
+                    /* Кінець 2-ї смужки */
                     #101010 75%
-                    /* Нижний черный блок (после 60%) */
+                    /* Нижній чорний блок (після 60%) */
                 );
             border: 1px solid #2d2d2d;
         }
@@ -671,7 +671,7 @@
             max-width: 800px;
         }
 
-        /* Стили для модального окна */
+        /* Стилі для модального вікна */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -791,43 +791,43 @@
             color: white;
         }
 
-        /* ауф таблицы */
+        /* Таблиці ТКВ */
 
         table {
             width: 650px;
             border-collapse: collapse;
             border: 2px solid #ccc;
-            /* Изменено на белый цвет, как в комментарии */
+            /* Змінено на білий колір, як у коментарі */
             margin-bottom: 20px;
             background: transparent;
             font-family: sans-serif;
-            /* Добавлен шрифт для аккуратности */
+            /* Шрифт доданий для ратунковості */
         }
 
         th,
         td {
             border: 2px solid #ccc;
-            /* Изменено на белый цвет */
+            /* Змінено на білий колір */
             padding: 10px;
             background: transparent;
             color: #ccc;
-            /* Изменено на белый цвет */
+            /* Змінено на білий колір */
             text-align: left;
-            /* Текст по левому краю по умолчанию */
+            /* Текст відрівняний вліво за змівчанням */
         }
 
         th {
             font-weight: bold;
             text-align: center;
-            /* Заголовок по центру */
+            /* Наголовок розміщений праворуч */
         }
 
-        /* Класс для ячеек, которые нужно отцентрировать */
+        /* Клас для ячейк, які потрібно розмістити */
         .center-text {
             color: #ccc;
         }
 
-        /* Стили для <i> оставлены, на случай если ты добавишь этот тег позже */
+        /* Стилі для <i> останні, на випадок якщо ви додасте цей тег потім */
         i {
             color: #ccc;
             font-style: italic;
@@ -845,7 +845,7 @@
             -ms-user-select: none;
         }
 
-        /* Убираем стандартную полосу прокрутки */
+        /* Видаляємо стандартний ползунок */
         ::-webkit-scrollbar {
             width: 12px;
         }
@@ -3923,24 +3923,24 @@
             const modal = document.getElementById('modal-update');
             modal.style.display = show ? 'flex' : 'none';
 
-            // Блокируем прокрутку фона, когда окно открыто
+            // Блокуємо прокручування фону, коли вікно відкрито
             document.body.style.overflow = show ? 'hidden' : 'auto';
         }
         function showPage(pageId) {
-            // Скрываем все страницы
+            // Приховуємо всі сторінки
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.remove('active');
             });
 
-            // Показываем нужную
+            // Показуємо потрібну
             const activePage = document.getElementById(pageId + '-page') || document.getElementById(pageId);
             if (activePage) {
                 activePage.classList.add('active');
             } else {
-                console.warn('showPage: не найдена страница', pageId);
+                console.warn('showPage: сторінка не знайдена', pageId);
             }
 
-            // Обновляем хлебные крошки
+            // Оновлюємо хлібні крихти
             const breadcrumb = document.getElementById('breadcrumb');
 
             if (pageId === 'main') {
